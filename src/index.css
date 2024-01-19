@@ -1,3 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  /* For definining each page */
+  .pageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    max-height: fit-content;
+  }
+
+  /* Repeated Content Container with blurred background */
+  .blurredContentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(100, 100, 100, 0.5);
+    /* background-color: rgba(100, 100, 100, 0.7); */
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    position: relative;
+    /* z-index: 9; */
+  }
+
+  /* Classes for projects */
+  .projectCard {
+    border-radius: 10px;
+    width: 100%;
+    height: 30vh;
+    cursor: pointer;
+    background-color: rgba(100, 100, 100, 0.7);
+    backdrop-filter: blur(3px);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .projectCard_expanded {
+    background-color: rgba(100, 100, 100);
+    border-radius: 10px;
+    cursor: pointer;
+    height: 60vh;
+    width: 60vw;
+    max-width: 480px;
+    min-width: 360px;
+
+
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    margin: auto;
+    /* z-index: 10; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-self: center;
+    padding: 4px;
+    justify-content: space-between;
+    /* transition: all 0.3s ease; */
+  }
+
+  .projectCard:nth-child(1) {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+
+  }
+
+  .projectCard:nth-child(2) {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .projectCard:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+
+  }
+
+  .projectCard:nth-child(4) {
+    grid-column: 2 / span 2;
+    grid-row: 2;
+  }
+
+  .projectCard:nth-child(5) {
+    grid-column: 1;
+    grid-row: 3;
+
+  }
+
+  .projectCard:nth-child(6) {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .projectCard:nth-child(7) {
+    grid-column: 3;
+    grid-row: 3;
+
+  }
+
+  /* .projectCard:nth-child(8) {
+    grid-column: 2 / span 2;
+    grid-row: 4;
+  } */
+
+  .dimmingLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1;
+    /* Adjust the z-index to ensure the dimming layer is above other content */
+    pointer-events: none;
+    /* Allows interaction with elements behind the dimming layer */
+  }
+
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
