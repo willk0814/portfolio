@@ -26,6 +26,7 @@ function App() {
         <EducationPage />
         <ExperiencePage />
         <ProjectTile />
+        {/* <ProjectsPage /> */}
         <ContactMe />
 
       </div>

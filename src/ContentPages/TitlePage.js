@@ -19,21 +19,21 @@ export default function TitlePage() {
         <div className='mt-6'>
           <div className='flex flex-row space-x-4'>
             <a 
-            className='mx' 
+            // className='' 
             href='https://linkedin.com/in/will-koenig' 
             target='_blank'
             rel='noreferrer'>
               <AiFillLinkedin className='cursor-pointer' size={70} color='white'/>
             </a>
             <a 
-            className='mx' 
+            // className='mx' 
             href='https://github.com/willk0814' 
             target='_blank'
             rel='noreferrer'>
               <AiFillGithub className='cursor-pointer' size={70} color='white'/>
             </a>
             <a 
-            className='mx' 
+            // className='mx' 
             href={Koenig_Resume} 
             target='_blank'
             rel='noopener noreferrer'>
