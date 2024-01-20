@@ -19,24 +19,24 @@ export default function TitlePage() {
         <div className='mt-6'>
           <div className='flex flex-row space-x-4'>
             <a 
-            // className='' 
-            href='https://linkedin.com/in/will-koenig' 
-            target='_blank'
-            rel='noreferrer'>
+              className='rounded-lg border-2 border-[#2A2A2A] hover:transition-none sm:hover:border-white transition duration-500' 
+              href='https://linkedin.com/in/will-koenig' 
+              target='_blank'
+              rel='noreferrer'>
               <AiFillLinkedin className='cursor-pointer' size={70} color='white'/>
             </a>
             <a 
-            // className='mx' 
-            href='https://github.com/willk0814' 
-            target='_blank'
-            rel='noreferrer'>
+              className='rounded-lg border-2 border-[#2A2A2A] hover:transition-none sm:hover:border-white transition duration-500' 
+              href='https://github.com/willk0814' 
+              target='_blank'
+              rel='noreferrer'>
               <AiFillGithub className='cursor-pointer' size={70} color='white'/>
             </a>
             <a 
-            // className='mx' 
-            href={Koenig_Resume} 
-            target='_blank'
-            rel='noopener noreferrer'>
+              className='rounded-lg border-2 border-[#2A2A2A] hover:transition-none sm:hover:border-white transition duration-500' 
+              href={Koenig_Resume} 
+              target='_blank'
+              rel='noopener noreferrer'>
               <HiOutlineDocumentText className='cursor-pointer' size={70} color='white'/>
             </a>
           </div>

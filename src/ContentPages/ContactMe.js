@@ -10,7 +10,7 @@ export default function ContactMe() {
       
           <textarea className='resize-none bg-inherit w-full h-60 border-white border-2 rounded-md text-white placeholder:text-white p-1' placeholder='Enter your message here'/>
           
-          <button className='mt-4 px-2 py-0.5 bg-inherit rounded-md border-white border-2 text-white transition-transform ease-in-out duration-300 hover:scale-150 hover:bg-white hover:text-gray-500'>Send</button>
+          <button className='mt-4 px-2 py-0.5 bg-inherit rounded-md border-white border-2 text-white transition-transform ease-in-out duration-300 hover:scale-[1.2] hover:bg-white hover:text-gray-500'>Send</button>
         </div>
     </div>
   )

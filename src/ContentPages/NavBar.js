@@ -35,7 +35,7 @@ export default function NavBar() {
     // useEffect to detect window resizes
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth <= 800) {
+            if (window.innerWidth <= 885) {
                 setShowMobileNavBar(true)
             } else {
                 setShowMobileNavBar(false)
@@ -56,7 +56,7 @@ export default function NavBar() {
                 onMouseEnter={() => toggleUnderline('home')} 
                 onMouseLeave={() => toggleUnderline('home')}>
                 <Link to='home' smooth={true} duration={500}>
-                    <h2 className='text-white cursor-pointer font-semibold text-xl'>
+                    <h2 className='text-white cursor-pointer font-semibold text-2xl'>
                         Will Koenig
                     </h2>
                 </Link>
@@ -77,7 +77,7 @@ export default function NavBar() {
                             onMouseEnter={() => toggleUnderline('about')} 
                             onMouseLeave={() => toggleUnderline('about')}>
                             <Link to='about me' smooth={true} duration={500}>
-                                <h2 className='text-white cursor-pointer font-semibold text-lg'>About Me</h2>
+                                <h2 className='text-white cursor-pointer font-semibold text-2xl'>About Me</h2>
                             </Link>
                             <div 
                                 className='w-[0%] relative bg-white h-[2px] duration-300 left-0'
@@ -90,7 +90,7 @@ export default function NavBar() {
                             onMouseEnter={() => toggleUnderline('skills')} 
                             onMouseLeave={() => toggleUnderline('skills')}>
                             <Link to='skills' smooth={true} duration={500}>
-                                <h2 className='text-white cursor-pointer font-semibold text-lg'>Skills</h2>
+                                <h2 className='text-white cursor-pointer font-semibold text-2xl'>Skills</h2>
                             </Link>
                             <div 
                                 className='w-[0%] relative bg-white h-[2px] duration-300'
@@ -103,7 +103,7 @@ export default function NavBar() {
                             onMouseEnter={() => toggleUnderline('education')} 
                             onMouseLeave={() => toggleUnderline('education')}>
                             <Link to='education' smooth={true} duration={500}>
-                                <h2 className='text-white cursor-pointer font-semibold text-lg'>Education</h2>
+                                <h2 className='text-white cursor-pointer font-semibold text-2xl'>Education</h2>
                             </Link>
                             <div 
                                 className='w-[0%] relative bg-white h-[2px] duration-300'
@@ -116,7 +116,7 @@ export default function NavBar() {
                             onMouseEnter={() => toggleUnderline('experience')} 
                             onMouseLeave={() => toggleUnderline('experience')}>
                             <Link to='experience' smooth={true} duration={500}>
-                                <h2 className='text-white cursor-pointer font-semibold text-lg'>Experience</h2>
+                                <h2 className='text-white cursor-pointer font-semibold text-2xl'>Experience</h2>
                             </Link>
                             <div 
                                 className='w-[0%] relative bg-white h-[2px] duration-300'
@@ -129,7 +129,7 @@ export default function NavBar() {
                             onMouseEnter={() => toggleUnderline('projects')} 
                             onMouseLeave={() => toggleUnderline('projects')}>
                             <Link to='projects' smooth={true} duration={500}>
-                                <h2 className='text-white cursor-pointer font-semibold text-lg'>Projects</h2>
+                                <h2 className='text-white cursor-pointer font-semibold text-2xl'>Projects</h2>
                             </Link>
                             <div 
                                 className='w-[0%] relative bg-white h-[2px] duration-300'
@@ -142,7 +142,7 @@ export default function NavBar() {
                             onMouseEnter={() => toggleUnderline('contact')} 
                             onMouseLeave={() => toggleUnderline('contact')}>
                             <Link to='contact me' smooth={true} duration={500}>
-                                <h2 className='text-white cursor-pointer font-semibold text-lg'>Contact Me</h2>
+                                <h2 className='text-white cursor-pointer font-semibold text-2xl'>Contact Me</h2>
                             </Link>
                             <div 
                                 className='w-[0%] relative bg-white h-[2px] duration-300'
