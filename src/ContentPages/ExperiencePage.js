@@ -35,7 +35,13 @@ export default function ExperiencePage() {
             </div>
             {/* Sparks expandable section */}
             <div className={`overflow-hidden transition-height duration-300 ${isExpanded('Sparks') ? 'h-auto' : 'h-0'}`}>
-              <p className='text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id erat erat. Quisque eleifend id tortor quis condimentum. Aenean ut accumsan ex, vel ornare turpis. Morbi sed finibus mauris. Phasellus cursus auctor orci, et volutpat sem fermentum et. Nam sodales quam nec lorem accumsan euismod. Integer finibus euismod cursus. Integer id dui pulvinar ipsum consectetur ultricies eu ac est. Vivamus gravida metus et scelerisque auctor. In id enim velit. Pellentesque sapien arcu, porttitor sed commodo non, venenatis vitae est.</p>
+              <ul className = 'text-white list-disc px-6 text-xl'>
+                <li>Lead developer of a Bluetooth device controller application that primarily uses JavaScript (React Native) and C++ for some of the research devices</li>
+                <li>Managed the work of five engineers using SCRUM, JIRA, and Github</li>
+                <li>Cultivated a culture of Agile development and continuous improvement via inspect and adapt ceremonies:  daily standups, sprint reviews, retrospectives</li>
+                <li>Led weekly client-facing meetings to generate enhancement requirements</li>
+                <li>Delivered an application that streamlined testing and data collection resulting in a 300% increase in plants tested per session</li>
+              </ul>
             </div>
           </div>
 
@@ -51,7 +57,12 @@ export default function ExperiencePage() {
             </div>
             {/* Viinko expandable section */}
             <div className={`overflow-hidden transition-height duration-300 ${isExpanded('Viinko') ? 'h-auto' : 'h-0'}`}>
-              <p className='text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id erat erat. Quisque eleifend id tortor quis condimentum. Aenean ut accumsan ex, vel ornare turpis. Morbi sed finibus mauris. Phasellus cursus auctor orci, et volutpat sem fermentum et. Nam sodales quam nec lorem accumsan euismod. Integer finibus euismod cursus. Integer id dui pulvinar ipsum consectetur ultricies eu ac est. Vivamus gravida metus et scelerisque auctor. In id enim velit. Pellentesque sapien arcu, porttitor sed commodo non, venenatis vitae est.</p>
+              <ul className = 'text-white list-disc px-6 text-xl'>
+                  <li>
+                    Developed a Chrome extension in JavaScript and HTML/CSS used daily by approximately ~2000 students as a core element of their education software
+                  </li>
+                  <li>Created an interface to connect Google Classroom and Viinko calendar to reduced the time necessary to enter new assignments by 65% and increased student engagement with the platform</li>
+              </ul>
             </div>
           </div>
 
@@ -67,7 +78,12 @@ export default function ExperiencePage() {
             </div>
             {/* Business Basics for Engineers expandable section */}
             <div className={`overflow-hidden transition-height duration-300 ${isExpanded('BBE') ? 'h-auto' : 'h-0'}`}>
-              <p className='text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id erat erat. Quisque eleifend id tortor quis condimentum. Aenean ut accumsan ex, vel ornare turpis. Morbi sed finibus mauris. Phasellus cursus auctor orci, et volutpat sem fermentum et. Nam sodales quam nec lorem accumsan euismod. Integer finibus euismod cursus. Integer id dui pulvinar ipsum consectetur ultricies eu ac est. Vivamus gravida metus et scelerisque auctor. In id enim velit. Pellentesque sapien arcu, porttitor sed commodo non, venenatis vitae est.</p>
+            <ul className = 'text-white list-disc px-6 text-xl'>
+                  <li>Founded and managed and on-campus Registered Student Organization with a mission to help engineering students develop awareness of business fundamentals
+                  </li>
+                  <li>Conducted student outreach events to recruit 52 new members in our first semester</li>
+                  <li>Recruited industry speakers and facilitated five events followed by roundtable discussions</li>
+              </ul>
             </div>
           </div>
 
