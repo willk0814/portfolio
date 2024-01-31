@@ -1,42 +1,27 @@
-import React, { useState } from 'react';
+import React from 'react'
 
-// Framer motion import 
-import { motion } from 'framer-motion'
-
-// Stylesheet
 import './Projects.css'
 
-const cards = [1, 2, 3, 4, 5, 6]
+import { motion } from 'framer-motion'
 
-export default function ProjectTile() {
-
-  const [selectedId, setSelectedId] = useState(null)
-
+export default function ProjectTile({ card_id, isSelected, title, content, handleClick }) {
   return (
-    <div className='pageContainer' name='projects'>
-      <h1 className='text-white text-8xl'>Projects</h1>
+    <motion.div 
+        className={isSelected ? 'opened-card' : 'card' }
+        layout
+        layoutId = {`card-container-${card_id}`}
+        onClick={() => handleClick(card_id)}>
+        <motion.div
+            className='title-container'
+            layoutId = {`title-container-${card_id}`}>
+            <h2 className='text-3xl font-bold text-white'>{title}</h2>
+        </motion.div>
+        {isSelected && (
+            <motion.div>
+                <h2 className='text-white text-3xl font-bold'>{content}</h2>
+            </motion.div>
+        )}
         
-        <div className="layout-cards">
-          {cards.map((card, i) => (
-              <motion.div 
-                className={selectedId === card ? 'opened-card' : 'card' }
-                key={i}
-                layout
-                onClick={selectedId === card ? () => setSelectedId(null) : () => setSelectedId(card)}>
-                {selectedId === card && (
-                  <>
-                    <div />
-                  </>
-                )}
-              </motion.div>
-          ))}
-        <motion.div 
-          className="dim-layer" 
-          animate={{ opacity: selectedId ? .5 : 0 }}
-          onClick={() => setSelectedId(null)}
-        />
-      </div>
-
-    </div>
-  );
+        </motion.div>   
+  )
 }
