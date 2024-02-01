@@ -5,8 +5,9 @@ import TechnologyBar from './TechnologyBar'
 
 import { motion } from 'framer-motion'
 import { AiFillGithub } from 'react-icons/ai'
+import { FaExternalLinkSquareAlt } from 'react-icons/fa'
 
-export default function ProjectTile({ card_id, isSelected, title, content, handleClick, gitLink, stack }) {
+export default function ProjectTile({ card_id, isSelected, title, content, handleClick, gitLink, demoLink, stack }) {
   return (
     <motion.div 
         className={isSelected ? 'opened-card' : 'card' }
@@ -21,17 +22,31 @@ export default function ProjectTile({ card_id, isSelected, title, content, handl
         {isSelected && (
             <motion.div>
                 <div>
-                    {gitLink !== '' &&
-                        <div
-                            className='flex w-fit justify-start'> 
-                            <a href = {gitLink} target='_blank' rel='noreferrer'>
-                                <AiFillGithub 
-                                    color='#2A2A2A' 
-                                    size={55} 
-                                    className='mb-3 border-2 border-white rounded-md bg-white' />
-                            </a>
-                        </div>
-                    }
+                    <div className='flex flex-row mb-3'>
+                        {gitLink !== '' &&
+                            <div className='flex w-fit justify-center border-white rounded-md bg-white'> 
+                                <a href = {gitLink} target='_blank' rel='noreferrer'>
+                                    <AiFillGithub 
+                                        color='#2A2A2A' 
+                                        size={55} 
+                                        className=' ' />
+                                </a>
+                            </div>
+                        }
+
+                        {demoLink !== '' && 
+                            <div className='flex w-fit justify-center items-center ml-4 bg-white rounded-md'> 
+                                <a 
+                                    href = {demoLink} 
+                                    target='_blank' 
+                                    rel='noreferrer'
+                                    className='text-black px-2 font-bold text-2xl'>
+                                    Demo
+                                </a>
+                            </div>
+                        }
+                    </div>
+
                     <TechnologyBar stack = {stack} />
                     <h2 className='text-white text-lg font-semibold'>{content}</h2>
                 </div>

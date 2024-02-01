@@ -33,6 +33,7 @@
     height: 30vh;
     min-height: 400px;
     width: 50vw;
+    max-width: 600px;
     min-width: 360px;
 
     position: fixed;

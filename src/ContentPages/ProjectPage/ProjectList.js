@@ -36,6 +36,7 @@ export default function ProjectList() {
                             content = {card.content} 
                             handleClick = {handleClick}
                             gitLink = {card.repo_link}
+                            demoLink = {card.demo_link}
                             stack = {card.stack} />
                 )})}
 
