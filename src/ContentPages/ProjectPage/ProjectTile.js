@@ -1,14 +1,16 @@
 import React from 'react'
 
 import './Projects.css'
+import TechnologyBar from './TechnologyBar'
 
 import { motion } from 'framer-motion'
+import { AiFillGithub } from 'react-icons/ai'
 
-export default function ProjectTile({ card_id, isSelected, title, content, handleClick }) {
+export default function ProjectTile({ card_id, isSelected, title, content, handleClick, gitLink, stack }) {
   return (
     <motion.div 
         className={isSelected ? 'opened-card' : 'card' }
-        layout
+        animate
         layoutId = {`card-container-${card_id}`}
         onClick={() => handleClick(card_id)}>
         <motion.div
@@ -18,7 +20,21 @@ export default function ProjectTile({ card_id, isSelected, title, content, handl
         </motion.div>
         {isSelected && (
             <motion.div>
-                <h2 className='text-white text-3xl font-bold'>{content}</h2>
+                <div>
+                    {gitLink !== '' &&
+                        <div
+                            className='flex w-fit justify-start'> 
+                            <a href = {gitLink} target='_blank' rel='noreferrer'>
+                                <AiFillGithub 
+                                    color='#2A2A2A' 
+                                    size={55} 
+                                    className='mb-3 border-2 border-white rounded-md bg-white' />
+                            </a>
+                        </div>
+                    }
+                    <TechnologyBar stack = {stack} />
+                    <h2 className='text-white text-lg font-semibold'>{content}</h2>
+                </div>
             </motion.div>
         )}
         

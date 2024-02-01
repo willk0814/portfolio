@@ -20,7 +20,7 @@ export default function ProjectList() {
 
   return (
     <div className='pageContainer' name='projects'>
-        <h1 className='text-8xl text-white mb-5'>Projects</h1>
+        <h1 className='text-8xl text-white my-8'>Projects</h1>
         <AnimatePresence>
             <div className="layout-cards">
             
@@ -34,13 +34,15 @@ export default function ProjectList() {
                             isSelected = {card_id === selectedId}
                             title = {card.title} 
                             content = {card.content} 
-                            handleClick = {handleClick} />
+                            handleClick = {handleClick}
+                            gitLink = {card.repo_link}
+                            stack = {card.stack} />
                 )})}
 
                 <motion.div 
-                className="dim-layer" 
-                animate={{ opacity: selectedId ? .7 : 0 }}
-                onClick={() => setSelectedId(null)} />
+                    className="dim-layer" 
+                    animate={{ opacity: selectedId ? .7 : 0 }}
+                    onClick={() => handleClick(null)} />
             </div>
         </AnimatePresence>
     </div>
