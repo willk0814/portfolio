@@ -31,7 +31,7 @@
     margin: auto;
 
     height: 30vh;
-    min-height: 400px;
+    min-height: 450px;
     width: 50vw;
     max-width: 600px;
     min-width: 360px;
@@ -103,6 +103,8 @@
     }
 
     .card {
+
+        min-width: 350px;
 
         &:nth-child(1) {
             grid-column: 1;

@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react'
 
 import { FaReact } from 'react-icons/fa'
-import { SiPython, SiMongodb, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { SiPython, SiMongodb, 
+    SiTailwindcss, SiTypescript, 
+    SiPytorch, SiTensorflow,
+    SiNumpy, SiPandas,
+    SiJupyter } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { IoLogoJavascript } from "react-icons/io5";
 
@@ -16,7 +20,11 @@ export default function TechnologyBar({ stack }) {
     const [express, setExpress] = useState(false)
     const [mongoDB, setMongoDB] = useState(false)
     const [mongoose, setMongoose] = useState(false)
-
+    const [pyTorch, setPyTorch] = useState(false)
+    const [tensorFlow, setTensorFlow] = useState(false)
+    const [numPy, setNumPy] = useState(false)
+    const [pandas, setPandas] = useState(false)
+    const [jupyter, setJupyter] = useState(false)
 
     useEffect(() => {
         for (const technology of stack) {
@@ -36,6 +44,16 @@ export default function TechnologyBar({ stack }) {
                 setMongoDB(true)
             } else if (technology === 'Python') {
                 setPython(true)
+            } else if (technology === 'PyTorch'){
+                setPyTorch(true)
+            } else if (technology === 'TensorFlow'){
+                setTensorFlow(true)
+            } else if (technology === 'NumPy'){
+                setNumPy(true)
+            } else if (technology === 'Pandas'){
+                setPandas(true)
+            } else if (technology === 'Jupyter') {
+                setJupyter(true)
             } else {
                 console.log('Unrecognized')
             }
@@ -77,6 +95,26 @@ export default function TechnologyBar({ stack }) {
 
         {TS && <div className='blurredContentContainer w-fit items-start mb-3 p-2 mr-1'>
             <SiTypescript size={25} color='white' />
+        </div>}
+
+        {pyTorch && <div className='blurredContentContainer w-fit items-start mb-3 p-2 mr-1'>
+            <SiPytorch size={25} color='white' />
+        </div>}
+
+        {tensorFlow && <div className='blurredContentContainer w-fit items-start mb-3 p-2 mr-1'>
+            <SiTensorflow size={25} color='white' />
+        </div>}
+
+        {numPy && <div className='blurredContentContainer w-fit items-start mb-3 p-2 mr-1'>
+            <SiNumpy size={25} color='white' />
+        </div>}
+
+        {pandas && <div className='blurredContentContainer w-fit items-start mb-3 p-2 mr-1'>
+            <SiPandas size={25} color='white' />
+        </div>}
+
+        {jupyter && <div className='blurredContentContainer w-fit items-start mb-3 p-2 mr-1'>
+            <SiJupyter size={25} color='white' />
         </div>}
     </div>
   )

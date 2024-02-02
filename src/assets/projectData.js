@@ -39,6 +39,6 @@ export const data = {
         content: 'This is some content that is going to be displayed when the card is selected',
         repo_link: '',
         demo_link: '',
-        stack: ['Python']
+        stack: ['Python', 'PyTorch', 'TensorFlow', 'NumPy', 'Pandas', 'Jupyter']
         },
     }
