@@ -8,7 +8,7 @@ export default function ProjectTile2({ card }) {
 
   return (
     <div 
-        className='blurredContentContainer w-[40vw] min-w-[350px] h-[25vh] min-h-[350px] p-4 m-2 flex flex-col items-start justify-between'>
+        className='blurredContentContainer max-w-[385px] w-[40vw] min-w-[350px] h-[25vh] min-h-[350px] p-4 m-2 flex flex-col items-start justify-between'>
         
         <div className='flex w-[100%] justify-between items-start mb-4'>
             <div>

@@ -32,6 +32,8 @@ export default function TechnologyBar({ stack }) {
                 setJS(true)
             } else if (technology === 'TS'){
                 setTS(true)
+            } else if (technology === 'tailwind'){
+                setTailwind(true)
             } else if (technology === 'ReactNative') {
                 setReactNative(true)
             } else if (technology === 'React') {
