@@ -17,7 +17,7 @@ export default function ProjectTile2({ card }) {
             <div className='flex flex-row '>
                 {card.git_link !== '' && 
                     <div className='bg-white rounded-md mx-1'>
-                        <a href = {card.git_link} target = '_blank' rel = 'noreferrer'
+                        <a href = {card.repo_link} target = '_blank' rel = 'noreferrer'
                             className='cursor-pointer'>
                             <AiFillGithub 
                                 color = '#2A2A2A'
