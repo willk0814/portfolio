@@ -72,7 +72,7 @@ export default function NavBar() {
                     className='flex items-center bg-[#2A2A2A]'
                     style={{display: !showMobileNavBar? '' : 'none'}}>
                     <ul className='flex flex-row list-none'>
-                        <li 
+                        {/* <li 
                             className='px-2' 
                             onMouseEnter={() => toggleUnderline('about')} 
                             onMouseLeave={() => toggleUnderline('about')}>
@@ -83,14 +83,14 @@ export default function NavBar() {
                                 className='w-[0%] relative bg-white h-[2px] duration-300 left-0'
                                 style={{ width: underlineState.about ? '100%' : '0%'}}>
                             </div>
-                        </li>
+                        </li> */}
 
                         <li 
                             className='px-2'
                             onMouseEnter={() => toggleUnderline('skills')} 
                             onMouseLeave={() => toggleUnderline('skills')}>
-                            <Link to='skills' smooth={true} duration={500}>
-                                <h2 className='text-white cursor-pointer font-semibold text-2xl'>Skills</h2>
+                            <Link to='skillsAndEducation' smooth={true} duration={500}>
+                                <h2 className='text-white cursor-pointer font-semibold text-2xl'>Skills & Education</h2>
                             </Link>
                             <div 
                                 className='w-[0%] relative bg-white h-[2px] duration-300'
@@ -98,7 +98,7 @@ export default function NavBar() {
                             </div>
                         </li>
 
-                        <li 
+                        {/* <li 
                             className='px-2'
                             onMouseEnter={() => toggleUnderline('education')} 
                             onMouseLeave={() => toggleUnderline('education')}>
@@ -109,7 +109,7 @@ export default function NavBar() {
                                 className='w-[0%] relative bg-white h-[2px] duration-300'
                                 style={{ width: underlineState.education ? '100%' : '0%'}}>
                             </div>
-                        </li>
+                        </li> */}
 
                         <li 
                             className='px-2'

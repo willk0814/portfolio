@@ -14,6 +14,7 @@ export default function ProjectsPage() {
             let card = data[card_id]
             return (
               < ProjectTile2
+                key = {i}
                 card = {card} />
             )
           })}

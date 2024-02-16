@@ -10,30 +10,39 @@ import { HiOutlineDocumentText } from 'react-icons/hi'
 export default function TitlePage() {
   return (
     <div className='pageContainer' name='home'>
-        {/* Name Title */}
-        <div className='flex-col rounded-md'>
-            <h1 className='text-white text-8xl text-center'>Will Koenig</h1>
-        </div>
 
-        {/* Social Links */}
-        <div className='mt-6'>
-          <div className='flex flex-row space-x-4'>
+        {/* About Me */}
+        <div className='flex flex-col w-[50vw] items-start justify-center'>
+
+          <div className='blurredContentContainer'>
+            <p className='text-white text-2xl p-2'>Hello! My name is, </p>
+          </div>
+
+          {/* Name Title */}
+          <h1 className='text-white text-8xl mb-3'>Will Koenig</h1>
+
+          <div className='blurredContentContainer'>
+            <p className='text-white text-2xl p-2'>This is some testing text, this is even more testing text, even more testing text, even more testing text, even more more more more</p>
+          </div>
+
+          {/* Social Links */}
+          <div className='flex flex-row space-x-2 my-2 w-[100%]'>
             <a 
-              className='rounded-lg border-2 border-[#2A2A2A]' 
+              className='blurredContentContainer w-1/3 py-2' 
               href='https://linkedin.com/in/will-koenig' 
               target='_blank'
               rel='noreferrer'>
               <AiFillLinkedin className='cursor-pointer' size={70} color='white'/>
             </a>
             <a 
-              className='rounded-lg border-2 border-[#2A2A2A]' 
+              className='blurredContentContainer w-1/3' 
               href='https://github.com/willk0814' 
               target='_blank'
               rel='noreferrer'>
               <AiFillGithub className='cursor-pointer' size={70} color='white'/>
             </a>
             <a 
-              className='rounded-lg border-2 border-[#2A2A2A]' 
+              className='blurredContentContainer w-1/3' 
               href={Koenig_Resume} 
               target='_blank'
               rel='noopener noreferrer'>
