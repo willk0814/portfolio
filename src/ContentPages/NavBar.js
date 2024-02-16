@@ -137,7 +137,7 @@ export default function NavBar() {
                             </div>
                         </li>
 
-                        <li 
+                        {/* <li 
                             className='px-2'
                             onMouseEnter={() => toggleUnderline('contact')} 
                             onMouseLeave={() => toggleUnderline('contact')}>
@@ -148,7 +148,7 @@ export default function NavBar() {
                                 className='w-[0%] relative bg-white h-[2px] duration-300'
                                 style={{ width: underlineState.contact ? '100%' : '0%'}}>
                             </div>
-                        </li>
+                        </li> */}
                     </ul>  
                 </div> 
                     ) : (
