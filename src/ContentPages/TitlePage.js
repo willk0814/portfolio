@@ -19,21 +19,21 @@ export default function TitlePage() {
         <div className='mt-6'>
           <div className='flex flex-row space-x-4'>
             <a 
-              className='rounded-lg border-2 border-[#2A2A2A] hover:transition-none sm:hover:border-white transition duration-500' 
+              className='rounded-lg border-2 border-[#2A2A2A]' 
               href='https://linkedin.com/in/will-koenig' 
               target='_blank'
               rel='noreferrer'>
               <AiFillLinkedin className='cursor-pointer' size={70} color='white'/>
             </a>
             <a 
-              className='rounded-lg border-2 border-[#2A2A2A] hover:transition-none sm:hover:border-white transition duration-500' 
+              className='rounded-lg border-2 border-[#2A2A2A]' 
               href='https://github.com/willk0814' 
               target='_blank'
               rel='noreferrer'>
               <AiFillGithub className='cursor-pointer' size={70} color='white'/>
             </a>
             <a 
-              className='rounded-lg border-2 border-[#2A2A2A] hover:transition-none sm:hover:border-white transition duration-500' 
+              className='rounded-lg border-2 border-[#2A2A2A]' 
               href={Koenig_Resume} 
               target='_blank'
               rel='noopener noreferrer'>
