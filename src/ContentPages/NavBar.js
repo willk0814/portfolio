@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-scroll'
+import { Link } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
 export default function NavBar() {
@@ -55,7 +55,7 @@ export default function NavBar() {
                 className='flex flex-col items-center justify-center'
                 onMouseEnter={() => toggleUnderline('home')} 
                 onMouseLeave={() => toggleUnderline('home')}>
-                <Link to='home' smooth={true} duration={500}>
+                <Link to='/'>
                     <h2 className='text-white cursor-pointer font-semibold text-2xl'>
                         Will Koenig
                     </h2>
@@ -72,25 +72,25 @@ export default function NavBar() {
                     className='flex items-center bg-[#2A2A2A]'
                     style={{display: !showMobileNavBar? '' : 'none'}}>
                     <ul className='flex flex-row list-none'>
-                        {/* <li 
-                            className='px-2' 
-                            onMouseEnter={() => toggleUnderline('about')} 
-                            onMouseLeave={() => toggleUnderline('about')}>
-                            <Link to='about me' smooth={true} duration={500}>
-                                <h2 className='text-white cursor-pointer font-semibold text-2xl'>About Me</h2>
+                        <li 
+                            className='px-2'
+                            onMouseEnter={() => toggleUnderline('education')} 
+                            onMouseLeave={() => toggleUnderline('education')}>
+                            <Link to='/resume'>
+                                <h2 className='text-white cursor-pointer font-semibold text-2xl'>Resume</h2>
                             </Link>
                             <div 
-                                className='w-[0%] relative bg-white h-[2px] duration-300 left-0'
-                                style={{ width: underlineState.about ? '100%' : '0%'}}>
+                                className='w-[0%] relative bg-white h-[2px] duration-300'
+                                style={{ width: underlineState.education ? '100%' : '0%'}}>
                             </div>
-                        </li> */}
+                        </li>
 
                         <li 
                             className='px-2'
                             onMouseEnter={() => toggleUnderline('skills')} 
                             onMouseLeave={() => toggleUnderline('skills')}>
-                            <Link to='skillsAndEducation' smooth={true} duration={500}>
-                                <h2 className='text-white cursor-pointer font-semibold text-2xl'>Skills & Education</h2>
+                            <Link to='/skills'>
+                                <h2 className='text-white cursor-pointer font-semibold text-2xl'>Skills</h2>
                             </Link>
                             <div 
                                 className='w-[0%] relative bg-white h-[2px] duration-300'
@@ -98,24 +98,24 @@ export default function NavBar() {
                             </div>
                         </li>
 
-                        {/* <li 
+                        <li 
                             className='px-2'
                             onMouseEnter={() => toggleUnderline('education')} 
                             onMouseLeave={() => toggleUnderline('education')}>
-                            <Link to='education' smooth={true} duration={500}>
+                            <Link to='/education'>
                                 <h2 className='text-white cursor-pointer font-semibold text-2xl'>Education</h2>
                             </Link>
                             <div 
                                 className='w-[0%] relative bg-white h-[2px] duration-300'
                                 style={{ width: underlineState.education ? '100%' : '0%'}}>
                             </div>
-                        </li> */}
+                        </li>
 
                         <li 
                             className='px-2'
                             onMouseEnter={() => toggleUnderline('experience')} 
                             onMouseLeave={() => toggleUnderline('experience')}>
-                            <Link to='experience' smooth={true} duration={500}>
+                            <Link to='/experience'>
                                 <h2 className='text-white cursor-pointer font-semibold text-2xl'>Experience</h2>
                             </Link>
                             <div 
@@ -128,7 +128,7 @@ export default function NavBar() {
                             className='px-2'
                             onMouseEnter={() => toggleUnderline('projects')} 
                             onMouseLeave={() => toggleUnderline('projects')}>
-                            <Link to='projects' smooth={true} duration={500}>
+                            <Link to='/projects'>
                                 <h2 className='text-white cursor-pointer font-semibold text-2xl'>Projects</h2>
                             </Link>
                             <div 
@@ -141,7 +141,7 @@ export default function NavBar() {
                             className='px-2'
                             onMouseEnter={() => toggleUnderline('contact')} 
                             onMouseLeave={() => toggleUnderline('contact')}>
-                            <Link to='contact me' smooth={true} duration={500}>
+                            <Link to='/contact'>
                                 <h2 className='text-white cursor-pointer font-semibold text-2xl'>Contact Me</h2>
                             </Link>
                             <div 

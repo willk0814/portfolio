@@ -2,7 +2,7 @@ import React from 'react'
 
 // Import data and project tile component
 import { data } from '../../assets/projectData'
-import ProjectTile2 from './ProjectTile2'
+import ProjectTile from './ProjectTile'
 
 export default function ProjectsPage() {
 
@@ -13,7 +13,7 @@ export default function ProjectsPage() {
           {Object.keys(data).map((card_id, i) => {
             let card = data[card_id]
             return (
-              < ProjectTile2
+              <ProjectTile
                 key = {i}
                 card = {card} />
             )
