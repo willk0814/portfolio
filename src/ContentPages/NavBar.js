@@ -164,19 +164,13 @@ export default function NavBar() {
         </div>
         {/* Mobile NavBar */}
         <div
-            className='relative flex items-center justify-center top-0 left-0 w-full h-[100vh] bg-[#2A2A2A]'
+            className='relative flex items-center justify-center top-0 left-0 w-full bg-[#2A2A2A]'
             style={{ display: mobileNavbarOpen? '' : 'none'}}>
             <ul className='list-none'>
 
-                <li className='text-4xl pb-[1.5rem] self-center'>
-                    <Link to='about me' smooth={true} duration={500} onClick={toggleMobileDisplay}>
-                        <h2 className='text-white text-center cursor-pointer'>About</h2>
-                    </Link>
-                </li>
-
                 <li className='text-4xl py-[1.5rem] self-center'>
-                    <Link to='skills' smooth={true} duration={500} onClick={toggleMobileDisplay}>
-                        <h2 className='text-white text-center cursor-pointer'>Skills</h2>
+                    <Link to='/'>
+                        <h2 className='text-white text-center cursor-pointer'>Home</h2>
                     </Link>
                 </li>
 
