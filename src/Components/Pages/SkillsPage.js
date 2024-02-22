@@ -1,11 +1,24 @@
 import React from 'react'
 
+// Import framer motion
+import { motion } from 'framer-motion'
+
 export default function SkillsPage() {
   return (
     <div className='pageContainer' name='skills'>
-        <h1 className='text-white text-8xl mb-3'>Skills</h1>
+        <motion.h1 
+            className='text-white text-8xl mb-3'
+            initial = {{ opacity: 0, y: '-2rem' }}
+            animate = {{ opacity: 1, y: 0 }}
+            transition = {{ duration: 0.5 }}>
+            Skills
+        </motion.h1>
         
-        <div className='flex flex-wrap items-start justify-center'>
+        <motion.div 
+            className='flex flex-wrap items-start justify-center'
+            initial = {{ opacity: 0, y: '2rem' }}
+            animate = {{ opacity: 1, y: 0 }}
+            transition = {{ duration: 0.5 }}>
             <div className='blurredContentContainer p-4 items-start justify-start m-1 w-60'>
                 <h1 className='text-white text-2xl font-bold'>Languages</h1>
                 <p className='text-white'>Python</p>
@@ -36,7 +49,7 @@ export default function SkillsPage() {
                 <p className='text-white'>Tensorflow</p>
             </div>
 
-        </div>
+        </motion.div>
     </div>
   )
 }

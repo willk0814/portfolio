@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 
+// import framer motion
+import { motion } from 'framer-motion'
+
 // Import downward arrow for expandable components
 import {FaArrowUp} from 'react-icons/fa'
 
@@ -20,9 +23,19 @@ export default function ExperiencePage() {
   return (
     <div className='pageContainer justify-start' name='experience'>
         <div className='flex mt-10 h-90vw justify-start flex-col'>
-          <h1 className='text-white text-6xl md:text-8xl mb-4 text-center'>Experience</h1>
+          <motion.h1 
+            className='text-white text-6xl md:text-8xl mb-4 text-center'
+            initial = {{ opacity: 0, y: '-2rem' }}
+            animate = {{ opacity: 1, y: 0 }}
+            transition = {{ duration: 0.5 }}>
+            Experience
+          </motion.h1>
 
-          <div className='flex flex-col space-y-4 p-2'>
+          <motion.div 
+            className='flex flex-col space-y-4 p-2'
+            initial = {{ opacity: 0, y: '2rem' }}
+            animate = {{ opacity: 1, y: 0 }}
+            transition = {{ duration: 0.5 }}>
 
             {/* Sparks Biomechanics Lab */}
             <div className='blurredContentContainer max-w-3xl p-4 items-start'>
@@ -88,7 +101,7 @@ export default function ExperiencePage() {
               </div>
             </div>
 
-          </div>
+          </motion.div>
         </div>
     </div>
   )
