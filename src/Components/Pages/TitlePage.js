@@ -26,11 +26,15 @@ export default function TitlePage() {
               Will Koenig
           </motion.h1>
 
-          <div className='blurredContentContainer'>
+          <motion.div 
+            className='blurredContentContainer'
+            initial = {{ opacity: 0 }}
+            animate = {{ opacity: 1 }}
+            transition = {{ duration: 1 }}>
             <p className='text-white text-2xl p-2'>
               Hi! My name is Will and I am a full stack Software Engineer with experience building dynamic web and mobile applications using JavaScript and React as well as implementing Machine Learning algorithms using Python.  I am interested in the applications of Machine Learning to so many of our daily tasks, how can we leverage data to learn more about seemingly mundane tasks?
             </p>
-          </div>
+          </motion.div>
 
           {/* Social Links */}
           <motion.div 

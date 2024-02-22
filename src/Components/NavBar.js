@@ -40,7 +40,7 @@ export default function NavBar() {
     // useEffect to detect window resizes
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth <= 885) {
+            if (window.innerWidth <= 855) {
                 setShowMobileNavBar(true)
             } else {
                 setShowMobileNavBar(false)
@@ -150,7 +150,7 @@ export default function NavBar() {
                     ) : (
                 // Mobile NavBar toggle button
                 <div
-                    className='p-2 flex items-center justify-center z-10' 
+                    className='blurredContentContainer p-2 flex items-center justify-center z-10' 
                     onClick={toggleMobileDisplay}>
                     {!mobileNavbarOpen ? (
                         <FaBars size={30} color='white' className='cursor-pointer'/>
