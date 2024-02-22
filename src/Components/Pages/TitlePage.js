@@ -1,5 +1,8 @@
 import React from 'react'
 
+// Import Framer Motion
+import { motion } from 'framer-motion'
+
 // Import Resume
 import Koenig_Resume from '../../assets/Koenig_Resume.pdf'
 
@@ -12,43 +15,54 @@ export default function TitlePage() {
     <div className='pageContainer' name='home'>
 
         {/* About Me */}
-        <div className='flex flex-col w-[50vw] items-start justify-center'>
-
-          <div className='blurredContentContainer'>
-            <p className='text-white text-2xl p-2'>Hello! My name is, </p>
-          </div>
+        <div className='flex flex-col w-[80vw] max-w-[900px] items-center justify-center'>
 
           {/* Name Title */}
-          <h1 className='text-white text-8xl mb-3'>Will Koenig</h1>
+          <motion.h1 
+            className='text-white text-9xl mb-3 font-light text-center'
+            initial = {{ opacity: 0, y: '-2rem' }}
+            animate = {{ opacity: 1, y: 0 }}
+            transition = {{ duration: 1 }}>
+              Will Koenig
+          </motion.h1>
 
           <div className='blurredContentContainer'>
-            <p className='text-white text-2xl p-2'>This is some testing text, this is even more testing text, even more testing text, even more testing text, even more more more more</p>
+            <p className='text-white text-2xl p-2'>
+              Hi! My name is Will and I am a full stack Software Engineer with experience building dynamic web and mobile applications using JavaScript and React as well as implementing Machine Learning algorithms using Python.  I am interested in the applications of Machine Learning to so many of our daily tasks, how can we leverage data to learn more about seemingly mundane tasks?
+            </p>
           </div>
 
           {/* Social Links */}
-          <div className='flex flex-row space-x-2 my-2 w-[100%]'>
-            <a 
-              className='blurredContentContainer w-1/3 py-2' 
+          <motion.div 
+            className = 'flex flex-row my-2 w-[100%] space-x-2 justify-center'
+            initial = {{ opacity: 0, y: '2rem' }}
+            animate = {{ opacity: 1, y: 0 }}
+            transition = {{ duration: 1 }}>
+            <motion.a 
+              className='blurredContentContainer w-1/3 flex justify-center py-1' 
               href='https://linkedin.com/in/will-koenig' 
               target='_blank'
-              rel='noreferrer'>
+              rel='noreferrer'
+              whileHover = {{ boxShadow: '0px 0px 8px rgb(255, 255, 255)'}}>
               <AiFillLinkedin className='cursor-pointer' size={70} color='white'/>
-            </a>
-            <a 
-              className='blurredContentContainer w-1/3' 
+            </motion.a>
+            <motion.a 
+              className='blurredContentContainer w-1/3 flex justify-center py-1' 
               href='https://github.com/willk0814' 
               target='_blank'
-              rel='noreferrer'>
+              rel='noreferrer'
+              whileHover = {{ boxShadow: '0px 0px 8px rgb(255, 255, 255)'}}>
               <AiFillGithub className='cursor-pointer' size={70} color='white'/>
-            </a>
-            <a 
-              className='blurredContentContainer w-1/3' 
+            </motion.a>
+            <motion.a 
+              className='blurredContentContainer w-1/3 flex justify-center py-1' 
               href={Koenig_Resume} 
               target='_blank'
-              rel='noopener noreferrer'>
+              rel='noopener noreferrer'
+              whileHover = {{ boxShadow: '0px 0px 8px rgb(255, 255, 255)'}}>
               <HiOutlineDocumentText className='cursor-pointer' size={70} color='white'/>
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
         </div>
 
         {/* Floating Arrow Down */}

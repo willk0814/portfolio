@@ -1,4 +1,9 @@
 import React, { useEffect, useState } from 'react'
+
+// Framer Motion Import for animations
+import { motion } from 'framer-motion'
+
+// React Icons Imports
 import { Link } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
@@ -48,11 +53,15 @@ export default function NavBar() {
     }, [])
 
   return (
-    <div className='fixed left-0 w-full h-20 z-10'>
-        <div className='w-[100%] h-[80px] absolute left-0 flex justify-between bg-[#2A2A2A] p-2'>
+    <motion.div 
+        className='fixed left-0 w-full h-20 z-10'
+        initial = {{ y: '-100vh'}}
+        animate = {{ y: 0 }}
+        transition = {{ delay: 1, type: 'spring', bounce: 0.3 }}>
+        <div className='w-[100%] h-[80px] absolute left-0 flex justify-between p-2'>
             {/* Home Button */}
             <div
-                className='flex flex-col items-center justify-center'
+                className='blurredContentContainer px-2 flex flex-col items-center justify-center'
                 onMouseEnter={() => toggleUnderline('home')} 
                 onMouseLeave={() => toggleUnderline('home')}>
                 <Link to='/'>
@@ -69,22 +78,9 @@ export default function NavBar() {
             {/* Full Screen NavBar */}
             {!showMobileNavBar ? (
                 <div 
-                    className='flex items-center bg-[#2A2A2A]'
+                    className='blurredContentContainer rounded-xl py-0 flex items-center'
                     style={{display: !showMobileNavBar? '' : 'none'}}>
                     <ul className='flex flex-row list-none'>
-                        <li 
-                            className='px-2'
-                            onMouseEnter={() => toggleUnderline('education')} 
-                            onMouseLeave={() => toggleUnderline('education')}>
-                            <Link to='/resume'>
-                                <h2 className='text-white cursor-pointer font-semibold text-2xl'>Resume</h2>
-                            </Link>
-                            <div 
-                                className='w-[0%] relative bg-white h-[2px] duration-300'
-                                style={{ width: underlineState.education ? '100%' : '0%'}}>
-                            </div>
-                        </li>
-
                         <li 
                             className='px-2'
                             onMouseEnter={() => toggleUnderline('skills')} 
@@ -199,6 +195,6 @@ export default function NavBar() {
                 </li>
             </ul>
         </div>
-    </div>
+    </motion.div>
   )
 }

@@ -25,8 +25,8 @@
     align-items: center;
     justify-content: center;
 
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    background-color: rgba(6, 27, 35, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
+    /* background-color: rgba(6, 27, 35, 0.5); */
     /* background-color: rgba(100, 100, 100, 0.7); */
     backdrop-filter: blur(2px);
     border-radius: 10px;

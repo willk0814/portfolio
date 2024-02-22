@@ -1,6 +1,6 @@
-const possibleTechnologies = ['JS', 'TS', 'Python',
-    'ReactNative', 'React', 'Express', 'Mongoose', 'MongoDB', 'tailwind',
-    'NumPy', 'Pandas', 'PyTorch', 'TensorFlow', 'Jupyter']
+// const possibleTechnologies = ['JS', 'TS', 'Python',
+//     'ReactNative', 'React', 'Express', 'Mongoose', 'MongoDB', 'tailwind',
+//     'NumPy', 'Pandas', 'PyTorch', 'TensorFlow', 'Jupyter']
     
 export const data = {
     'project_1' : {
@@ -15,7 +15,7 @@ export const data = {
         content: 'A full stack browser note-taking application that I developed.  Using the MERN stack I implemented all basic login, register, note taking and security features.',
         repo_link: 'https://github.com/willk0814/justNotes',
         demo_link: '',
-        stack: ['JS', 'React', 'Express', 'Mongoose', 'MongoDB', 'tailwind']
+        stack: ['JS', 'React', 'MongoDB', 'tailwind', 'Express', 'Mongoose', 'Jupyer']
         },
     'project_3' : {
         title: 'Pathfinder',
