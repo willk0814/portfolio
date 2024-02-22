@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Import data and project tile component
-import { data } from '../../assets/projectData'
+import { data } from '../../../assets/projectData'
 import ProjectTile from './ProjectTile'
 
 export default function ProjectsPage() {

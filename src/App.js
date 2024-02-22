@@ -5,19 +5,19 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ParticleComponent from "./ParticleBg/ParticleComponent";
 
 // Import Created Components
-import NavBar from "./ContentPages/NavBar";
-import TitlePage from "./ContentPages/TitlePage";
+import NavBar from "./Components/NavBar";
+import TitlePage from "./Components/Pages/TitlePage";
 
 // Resume Page Components to be deleted
-import SkillsPage from "./ContentPages/SkillsPage";
-import EducationPage from "./ContentPages/EducationPage"
-import ExperiencePage from "./ContentPages/ExperiencePage";
+import SkillsPage from "./Components/Pages/SkillsPage";
+import EducationPage from "./Components/Pages/EducationPage"
+import ExperiencePage from "./Components/Pages/ExperiencePage";
 
 // Single Resume Page
-import ResumePage from "./ContentPages/ResumePage/ResumePage";
+import ResumePage from "./Components/Pages/ResumePage/ResumePage";
 
-import ProjectsPage from "./ContentPages/ProjectPage/ProjectsPage";
-import ContactMe from "./ContentPages/ContactMe";
+import ProjectsPage from "./Components/Pages/ProjectPage/ProjectsPage";
+import ContactMe from "./Components/Pages/ContactMe";
 
 
 function App() {

@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Import Resume
-import Koenig_Resume from '../assets/Koenig_Resume.pdf'
+import Koenig_Resume from '../../assets/Koenig_Resume.pdf'
 
 // Import Icons for Links
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai'

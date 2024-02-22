@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { skillsData } from '../assets/skillsData'
+import { skillsData } from '../../assets/skillsData'
 
 function SkillCard({title, content_arr}) {
 
