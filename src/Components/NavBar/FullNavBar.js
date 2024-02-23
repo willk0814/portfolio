@@ -4,8 +4,6 @@ import { Link, useLocation } from 'react-router-dom'
 
 export default function FullNavBar() {
 
-    const [showMobileNavBar, setShowMobileNavBar] = useState(false)
-
     const location = useLocation()
 
     // SV to hold underlined state for full screen NavBar
