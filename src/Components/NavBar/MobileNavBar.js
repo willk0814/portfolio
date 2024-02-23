@@ -76,7 +76,7 @@ export default function MobileNavBar() {
                         <ul className='space-y-6'>
                             <motion.li
                                 whileHover = {{ scale: 1.3, originX: 0 }}>
-                                <Link to='/' onClick = {toggleMobileNav}>
+                                <Link to='/portfolio' onClick = {toggleMobileNav}>
                                     <h1 className='text-white text-5xl font-extrabold'>Home</h1>
                                 </Link>
                             </motion.li>

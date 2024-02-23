@@ -55,7 +55,7 @@ export default function NavBar() {
                 className='blurredContentContainer px-2 flex flex-col items-center justify-center'
                 onMouseEnter={() => toggleUnderline('home')} 
                 onMouseLeave={() => toggleUnderline('home')}>
-                <Link to='/'>
+                <Link to='/portfolio'>
                     <h2 className='text-white cursor-pointer font-semibold text-2xl'>
                         Will Koenig
                     </h2>
