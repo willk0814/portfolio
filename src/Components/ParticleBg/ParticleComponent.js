@@ -24,10 +24,10 @@ export default function ParticleComponent() {
             options={{
                 background: {
                     color: {
-                        // value: "#2A3C3C",
+                        value: "#2A3C3C",
                         // value: "#000",
                         // value: '#18203A'
-                        value: '#2A2A2A'
+                        // value: '#0b3142'
                     },
                 },
                 fpsLimit: 120,

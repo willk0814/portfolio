@@ -1,36 +1,39 @@
-// Import Particle Component for Background
-import ParticleComponent from "./ParticleBg/ParticleComponent";
+// Import React Router
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Import Created Components
-import NavBar from "./ContentPages/NavBar";
-import TitlePage from "./ContentPages/TitlePage";
-import IntroductionPage from "./ContentPages/IntroductionPage";
-import SkillsPage from "./ContentPages/SkillsPage";
-import EducationPage from "./ContentPages/EducationPage"
-import ExperiencePage from "./ContentPages/ExperiencePage";
-import ProjectsPage from "./ContentPages/ProjectPage_v2/ProjectsPage";
-// import ProjectList from "./ContentPages/ProjectPage/ProjectList"
-import ContactMe from "./ContentPages/ContactMe";
+// Import Particle Component for Background
+import ParticleComponent from "./Components/ParticleBg/ParticleComponent";
+
+// Import NavBar Component
+import NavBar from "./Components/NavBar/NavBar";
+
+// Import Created Page Components
+import TitlePage from "./Components/Pages/TitlePage";
+import SkillsPage from "./Components/Pages/SkillsPage";
+import EducationPage from "./Components/Pages/EducationPage"
+import ExperiencePage from "./Components/Pages/ExperiencePage";
+import ProjectsPage from "./Components/Pages/ProjectPage/ProjectsPage";
+import ContactMe from "./Components/Pages/ContactMe";
 
 
 function App() {
   return (
-    <div className='relative'>
-      <ParticleComponent />
+    <Router >
       <div className='relative'>
-
-        <NavBar />
-        <TitlePage />
-        <IntroductionPage />
-        <SkillsPage />
-        <EducationPage />
-        <ExperiencePage />
-        <ProjectsPage />
-        {/* <ProjectList /> */}
-        {/* <ContactMe /> */}
-
+        <ParticleComponent />
+        <div className='relative'>
+          <NavBar />
+          <Routes>
+            <Route path="/" index element={<TitlePage/>} />
+            <Route path="/skills" element={<SkillsPage />} />
+            <Route path="/education" element={<EducationPage />} />
+            <Route path="/experience" element={<ExperiencePage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/contact" element={<ContactMe />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

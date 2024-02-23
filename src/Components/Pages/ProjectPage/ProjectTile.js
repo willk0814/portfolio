@@ -2,7 +2,7 @@ import React from 'react'
 
 import { AiFillGithub } from 'react-icons/ai'
 
-import TechnologyBar from '../ProjectPage/TechnologyBar'
+import TechnologyBar from './TechnologyBar'
 
 export default function ProjectTile2({ card }) {
 

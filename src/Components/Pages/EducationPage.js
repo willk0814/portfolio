@@ -1,11 +1,24 @@
 import React from 'react'
 
+// import framer motion
+import { motion } from 'framer-motion'
+
 export default function EducationPage() {
   return (
     <div className='pageContainer' name='education'>
-        <h1 className='text-white text-6xl md:text-8xl mb-4'>Education</h1>
+        <motion.h1 
+          className='text-white text-6xl md:text-8xl mb-4'
+          initial = {{ opacity: 0, y: '-2rem' }}
+          animate = {{ opacity: 1, y: 0 }}
+          transition = {{ duration: 0.5 }}>
+          Education
+        </motion.h1>
 
-        <div className='flex flex-wrap items-center justify-center'>
+        <motion.div 
+          className='flex flex-wrap items-center justify-center'
+          initial = {{ opacity: 0, y: '2rem' }}
+          animate = {{ opacity: 1, y: 0 }}
+          transition = {{ duration: 0.5 }}>
           <div className='blurredContentContainer m-2 p-4 max-w-[450px] w-[90vw] items-start justify-start'>
             <h1 className='text-white text-4xl'>Stevens</h1>
             <p className='text-white italic text-bold text-xl'>M.S. in Machine Learning</p>
@@ -26,7 +39,7 @@ export default function EducationPage() {
             </ul>
           </div>
 
-        </div>
+        </motion.div>
     </div>
   )
 }
