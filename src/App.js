@@ -18,7 +18,7 @@ import ContactMe from "./Components/Pages/ContactMe";
 
 function App() {
   return (
-    <Router >
+    <Router>
       <div className='relative'>
         <ParticleComponent />
         <div className='relative'>
