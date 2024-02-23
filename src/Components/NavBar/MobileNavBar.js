@@ -104,12 +104,12 @@ export default function MobileNavBar() {
                                     <h1 className='text-white text-5xl font-extrabold'>Projects</h1>
                                 </Link>
                             </motion.li>
-                            <motion.li
+                            {/* <motion.li
                                 whileHover = {{ scale: 1.3, originX: 0 }}>
                                 <Link to='/contact' onClick = {toggleMobileNav}>
                                     <h1 className='text-white text-5xl font-extrabold'>Contact Me</h1>
                                 </Link>
-                            </motion.li>
+                            </motion.li> */}
                         </ul>
                     </motion.div>
                     <motion.div
