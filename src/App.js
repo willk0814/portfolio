@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ParticleComponent from "./Components/ParticleBg/ParticleComponent";
 
 // Import NavBar Component
-import NavBar from "./Components/NavBar";
+import NavBar from "./Components/NavBar/NavBar";
 
 // Import Created Page Components
 import TitlePage from "./Components/Pages/TitlePage";

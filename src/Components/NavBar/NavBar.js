@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
 
-// Framer Motion Import for animations
 import { motion } from 'framer-motion'
-
-// React Icons Imports
 import { Link } from 'react-router-dom'
-import { FaBars, FaTimes } from 'react-icons/fa'
+
+import MobileNavBar from './MobileNavBar'
 
 export default function NavBar() {
     // SV to hold underlined state for full screen NavBar
@@ -22,19 +20,12 @@ export default function NavBar() {
     // SV to determine which navbar to display
     const [showMobileNavBar, setShowMobileNavBar] = useState(false)
 
-    // SV to hold state of mobile NavBar 
-    const [mobileNavbarOpen, setMobileNavbarOpen] = useState(false)
-
     // Functions to toggle underlines for full screen NavBar
     const toggleUnderline = (variable) => {
         setUnderlineState((prevState) => ({
             ...prevState,
             [variable]: !prevState[variable]
         }))
-    }
-
-    const toggleMobileDisplay = () => {
-        setMobileNavbarOpen(prevState => !prevState)
     }
 
     // useEffect to detect window resizes
@@ -54,7 +45,7 @@ export default function NavBar() {
 
   return (
     <motion.div 
-        className='fixed left-0 w-full h-20 z-10'
+        className='fixed left-0 w-full h-20 z-10 bg-[#2A3C3C]'
         initial = {{ y: '-100vh'}}
         animate = {{ y: 0 }}
         transition = {{ delay: 1, type: 'spring', bounce: 0.3 }}>
@@ -148,52 +139,7 @@ export default function NavBar() {
                     </ul>  
                 </div> 
                     ) : (
-                // Mobile NavBar toggle button
-                <div
-                    className='blurredContentContainer p-2 flex items-center justify-center z-10' 
-                    onClick={toggleMobileDisplay}>
-                    {!mobileNavbarOpen ? (
-                        <FaBars size={30} color='white' className='cursor-pointer'/>
-                            ) : (
-                        <FaTimes size={30} color='white' className='cursor-pointer'/>)}
-                </div> )}
-        </div>
-        {/* Mobile NavBar */}
-        <div
-            className='relative flex items-center justify-center top-0 left-0 w-full bg-[#2A2A2A]'
-            style={{ display: mobileNavbarOpen? '' : 'none'}}>
-            <ul className='list-none'>
-
-                <li className='text-4xl py-[1.5rem] self-center'>
-                    <Link to='/'>
-                        <h2 className='text-white text-center cursor-pointer'>Home</h2>
-                    </Link>
-                </li>
-
-                <li className='text-4xl py-[1.5rem]'>
-                    <Link to='education' smooth={true} duration={500} onClick={toggleMobileDisplay}>
-                        <h2 className='text-white text-center cursor-pointer'>Education</h2>
-                    </Link>
-                </li>
-
-                <li className='text-4xl py-[1.5rem]'>
-                    <Link to='experience' smooth={true} duration={500} onClick={toggleMobileDisplay}>
-                        <h2 className='text-white text-center cursor-pointer'>Experience</h2>
-                    </Link>
-                </li>
-
-                <li className='text-4xl py-[1.5rem]'>
-                    <Link to='projects' smooth={true} duration={500} onClick={toggleMobileDisplay}>
-                        <h2 className='text-white text-center cursor-pointer'>Projects</h2>
-                    </Link>
-                </li>
-
-                <li className='text-4xl py-[1.5rem]'>
-                    <Link to='contact me' smooth={true} duration={500} onClick={toggleMobileDisplay}>
-                        <h2 className='text-white text-center cursor-pointer'>Contact Me</h2>
-                    </Link>
-                </li>
-            </ul>
+                <MobileNavBar /> )}
         </div>
     </motion.div>
   )

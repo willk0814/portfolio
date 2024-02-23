@@ -24,7 +24,7 @@ export default function ExperiencePage() {
     <div className='pageContainer justify-start' name='experience'>
         <div className='flex mt-10 h-90vw justify-start flex-col'>
           <motion.h1 
-            className='text-white text-6xl md:text-8xl mb-4 text-center'
+            className='text-white text-8xl mb-4 text-center'
             initial = {{ opacity: 0, y: '-2rem' }}
             animate = {{ opacity: 1, y: 0 }}
             transition = {{ duration: 0.5 }}>
