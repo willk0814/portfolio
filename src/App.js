@@ -15,6 +15,9 @@ import ExperiencePage from "./Components/Pages/ExperiencePage";
 import ProjectsPage from "./Components/Pages/ProjectPage/ProjectsPage";
 import ContactMe from "./Components/Pages/ContactMe";
 
+// Import Project Page with animation carddsd
+import Projects from "./Components/Pages/Projects"
+
 
 function App() {
   return (
@@ -28,7 +31,7 @@ function App() {
             <Route path="/skills" element={<SkillsPage />} />
             <Route path="/education" element={<EducationPage />} />
             <Route path="/experience" element={<ExperiencePage />} />
-            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<ContactMe />} />
           </Routes>
         </div>
