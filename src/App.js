@@ -12,11 +12,11 @@ import TitlePage from "./Components/Pages/TitlePage";
 import SkillsPage from "./Components/Pages/SkillsPage";
 import EducationPage from "./Components/Pages/EducationPage"
 import ExperiencePage from "./Components/Pages/ExperiencePage";
-import ProjectsPage from "./Components/Pages/ProjectPage/ProjectsPage";
+// import ProjectsPage from "./Components/Pages/ProjectPage/ProjectsPage";
 import ContactMe from "./Components/Pages/ContactMe";
 
 // Import Project Page with animation carddsd
-import Projects from "./Components/Pages/Projects"
+import ProjectPage from "./Components/Pages/Projects/ProjectPage"
 
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
             <Route path="/skills" element={<SkillsPage />} />
             <Route path="/education" element={<EducationPage />} />
             <Route path="/experience" element={<ExperiencePage />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="/projects" element={<ProjectPage />} />
             <Route path="/contact" element={<ContactMe />} />
           </Routes>
         </div>
