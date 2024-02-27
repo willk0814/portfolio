@@ -1,38 +1,66 @@
 import React, { useState } from 'react'
 
-// Import framer components
-import { LayoutGroup, motion } from 'framer-motion'
-
 // Import data from assets
 import { data } from '../../../assets/projectData'
 
+// Import framer motion for render animations
+import { motion } from 'framer-motion'
+
 // Import project tile component
-import ProjectTile from './CollapsedProjectTile'
+import ExpandedProjectTile from './ExpandedProjectTile'
+import CollapsedProjectTile from './CollapsedProjectTile'
 
 export default function ProjectPage() {
 
-  const [expanded, setExpanded] = useState('')
+  const [selectedId, setSelectedId] = useState('')
+
+  const handleSelectCard = (project_id) => {
+    if (selectedId === project_id){
+      setSelectedId('')
+    } else {
+      setSelectedId(project_id)
+    }
+  }
 
   return (
     <div className='pageContainer'>
-      <div className='w-[80vw] flex items-center justify-center flex-col'>
+      
+      {/* Title Container */}
+      <motion.div
+        initial={{ opacity: 0, y:'-2rem' }}
+        animate={{ opacity: 1, y:0 }}
+        transition={{ duration: 0.5}}>
         <h1 className='text-white text-8xl'>Projects</h1>
-        <div className='my-4'>
-          <LayoutGroup>
-            <ul className='flex-wrap justify-center'>
-            {Object.keys(data).map((card_id, i) => {
-              let card_data = data[card_id]
+      </motion.div>
+
+      {/* List of Collapsed Project Tiles */}
+      <motion.ul
+        initial={{ opacity: 0, y:'2rem' }}
+        animate={{ opacity: 1, y:0 }}
+        transition={{ duration: 0.5}}
+        className='w-[85vw] flex justify-center mt-3'>
+          <div className='flex flex-wrap'>
+            {Object.keys(data).map((card_id, ind) => {
+              let card = data[card_id]
               return (
-                <li>
-                  <ProjectTile project_data = {card_data} />
-                </li>
+                <CollapsedProjectTile
+                  key = {ind}
+                  project_id = {card_id}
+                  project_data = {card}
+                  selectCard = {handleSelectCard} />
               )
             })}
-
-            </ul>
-          </LayoutGroup>
         </div>
-      </div>
+
+      </motion.ul>
+
+      {/* Expanded Project Tile */}
+      {selectedId !== '' && 
+        <ExpandedProjectTile 
+          project_id = {selectedId}
+          project_data = {data[selectedId]}
+          selectCard = {handleSelectCard}/>
+      }
     </div>
   )
 }

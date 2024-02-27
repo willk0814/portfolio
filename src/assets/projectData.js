@@ -25,7 +25,7 @@ export const data = {
         stack: ['TS', 'React', 'tailwind']
         },
     'project_4': {
-        title: 'Hand Written Number Categorization',
+        title: 'Written Numbers',
         content: 'A neural network that I trained to recognize handwritten numbers 0-9',
         repo_link: 'https://github.com/willk0814/numberRecognition',
         demo_link: '',
@@ -39,6 +39,13 @@ export const data = {
         stack: ['Python']
         },
     'project_7': {
+        title: 'Sorting Visualizer',
+        content: 'A web app that demonstrates the steps taken by different comparison based sorting algorithms',
+        repo_link: 'https://github.com/willk0814/sorting_visualizer',
+        demo_link: 'https://willk0814.github.io/sorting_visualizer/',
+        stack: ['React', 'JS', 'tailwind']
+        },
+    'project_8': {
         title: 'Sorting Visualizer',
         content: 'A web app that demonstrates the steps taken by different comparison based sorting algorithms',
         repo_link: 'https://github.com/willk0814/sorting_visualizer',
