@@ -46,34 +46,35 @@ export default function ExpandedProjectTile({ project_id, project_data, selectCa
                 `${playerSize === 'sm' ?
                   'flex flex-col space-y-4 items-center' : 
                   'flex flex-row space-x-4'} 
-                 bg-[#5b6057] z-20 opacity-100 max-w-fit h-fit rounded-lg p-4 overflow-y-auto overflow-scroll`}>
+                 bg-[#5b6057] z-20 opacity-100 max-w-fit h-fit rounded-lg p-4`}>
                 
                 {/* Video Container */}
-                <motion.div
-                  variants={playerSize === 'sm' ? smImageVariants : imageVariants}
-                  className='w-fit bg-black rounded-lg flex items-center justify-center'>
-                  {project_data.video_id !== '' && 
-                    <>
-                      {playerSize === 'sm' &&
-                        <Youtube 
-                          style={{ borderRadius: '15px', overflow: 'hidden'}}
-                          videoId={project_data.video_id} 
-                          opts={smPlayerOpts}/>}
-                      
-                      {playerSize === 'md' &&
-                        <Youtube 
-                          style={{ borderRadius: '15px', overflow: 'hidden'}}
-                          videoId={project_data.video_id} 
-                          opts={mdPlayerOpts}/>}
+                {project_data.video_idd !== '' &&
+                  <motion.div
+                    variants={playerSize === 'sm' ? smImageVariants : imageVariants}
+                    className='w-fit bg-black rounded-lg flex items-center justify-center'>
+                    {project_data.video_id !== '' && 
+                      <>
+                        {playerSize === 'sm' &&
+                          <Youtube 
+                            style={{ borderRadius: '15px', overflow: 'hidden'}}
+                            videoId={project_data.video_id} 
+                            opts={smPlayerOpts}/>}
+                        
+                        {playerSize === 'md' &&
+                          <Youtube 
+                            style={{ borderRadius: '15px', overflow: 'hidden'}}
+                            videoId={project_data.video_id} 
+                            opts={mdPlayerOpts}/>}
 
-                      {playerSize === 'full' &&
-                        <Youtube 
-                          style={{ borderRadius: '15px', overflow: 'hidden'}}
-                          videoId={project_data.video_id} 
-                          opts={lgPlayerOpts}/>}
-                    </>}
-
-                </motion.div>
+                        {playerSize === 'full' &&
+                          <Youtube 
+                            style={{ borderRadius: '15px', overflow: 'hidden'}}
+                            videoId={project_data.video_id} 
+                            opts={lgPlayerOpts}/>}
+                      </>}
+                  </motion.div>
+                }
 
                 {/* Details Container */}
                 <motion.div 
@@ -89,7 +90,7 @@ export default function ExpandedProjectTile({ project_id, project_data, selectCa
 
                   <motion.span 
                     variants={spanVariants} 
-                    className='w-[100%] h-[1px] bg-white mb-3'></motion.span>
+                    className='w-[90%] h-[1px] bg-white mb-3'></motion.span>
 
                   {/* Buttons */}
                   <motion.div
@@ -121,7 +122,7 @@ export default function ExpandedProjectTile({ project_id, project_data, selectCa
                   </motion.div>
                   <motion.span 
                     variants={spanVariants} 
-                    className='w-[100%] h-[1px] bg-white mb-3'></motion.span>
+                    className='w-[90%] h-[1px] bg-white mb-3'></motion.span>
 
                   {/* Technology Stack */}
                   <motion.div variants={contentVariants}>
@@ -130,7 +131,7 @@ export default function ExpandedProjectTile({ project_id, project_data, selectCa
 
                   <motion.span 
                     variants={spanVariants} 
-                    className='w-[100%] h-[1px] bg-white mb-3'></motion.span>
+                    className='w-[90%] h-[1px] bg-white mb-3'></motion.span>
 
                   {/* Content */}
                   <motion.div 

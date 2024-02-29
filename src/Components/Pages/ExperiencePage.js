@@ -8,23 +8,43 @@ import {FaArrowUp} from 'react-icons/fa'
 
 export default function ExperiencePage() {
   // SV to hold the current expanded section - initialied to sparks
-  const [expandedSection, setExpandedSection] = useState('Sparks')
+  const [expandedSection, setExpandedSection] = useState('')
 
   // Function to handle setting the expanded section
   const handleSelectSection = (section) => {
-    console.log(section)
-    setExpandedSection(section)
+    if (section === expandedSection) {
+      setExpandedSection('')
+    } else {
+      setExpandedSection(section)
+    }
   }
 
   // Function that checks if a section is expanded
   const isExpanded = (section) => section === expandedSection
+
+  // Variant for Content Container
+  const containerVariant = {
+    open: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: {
+          when: 'beforeChildren',
+          staggerChildren: 0.1
+        }
+      }},
+    closed: {
+      y: '-2rem',
+      opacity: 0
+    }
+  }
   
 
   return (
     <div className='pageContainer justify-start' name='experience'>
         <div className='flex mt-10 h-90vw justify-start flex-col'>
           <motion.h1 
-            className='text-white text-8xl mb-4 text-center'
+            className='text-white md:text-8xl text-6xl mb-4 text-center'
             initial = {{ opacity: 0, y: '-2rem' }}
             animate = {{ opacity: 1, y: 0 }}
             transition = {{ duration: 0.5 }}>

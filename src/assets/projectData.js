@@ -50,5 +50,21 @@ export const data = {
         demo_link: 'https://willk0814.github.io/sorting_visualizer/',
         video_id: 'Xa8D1WPD8_I',
         stack: ['React', 'JS', 'tailwind']
+        },
+    'project_8': {
+        title: 'Command Line 2048',
+        content: 'A python program that allows you to play 2048 right in your command line',
+        repo_link: 'https://github.com/willk0814/CommandLine_2048',
+        demo_link: '',
+        video_id: '',
+        stack: ['Python']
+        },
+    'project_9': {
+        title: 'Space Invaders',
+        content: 'A web app that enables the user to play space invaders and record their scores to the leader board',
+        repo_link: 'https://github.com/willk0814/CommandLine_2048',
+        demo_link: '',
+        video_id: '',
+        stack: ['JS', 'CSS', 'HTML']
         }
     }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import { FaReact } from 'react-icons/fa'
+import { FaReact, FaHtml5 } from 'react-icons/fa'
 import { SiPython, SiMongodb, 
     SiTailwindcss, SiTypescript, 
     SiPytorch, SiTensorflow,
@@ -8,6 +8,8 @@ import { SiPython, SiMongodb,
     SiJupyter } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { IoLogoJavascript } from "react-icons/io5";
+import { IoLogoCss3 } from "react-icons/io";
+
 
 
 export default function TechnologyBar({ stack }) {
@@ -25,6 +27,8 @@ export default function TechnologyBar({ stack }) {
     const [numPy, setNumPy] = useState(false)
     const [pandas, setPandas] = useState(false)
     const [jupyter, setJupyter] = useState(false)
+    const [HTML, setHTML] = useState(false)
+    const [CSS, setCSS] = useState(false)
 
     useEffect(() => {
         for (const technology of stack) {
@@ -56,6 +60,10 @@ export default function TechnologyBar({ stack }) {
                 setPandas(true)
             } else if (technology === 'Jupyter') {
                 setJupyter(true)
+            } else if (technology === 'CSS'){
+                setCSS(true)
+            } else if (technology === 'HTML') {
+                setHTML(true)
             } else {
                 console.log('Unrecognized')
             }
@@ -117,6 +125,14 @@ export default function TechnologyBar({ stack }) {
 
         {jupyter && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
             <SiJupyter size={25} color='white' />
+        </div>}
+        
+        {CSS && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+            <IoLogoCss3 size={25} color='white' />
+        </div>}
+
+        {HTML && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+            <FaHtml5 size={25} color='white' />
         </div>}
     </div>
   )
