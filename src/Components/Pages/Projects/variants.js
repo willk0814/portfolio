@@ -49,7 +49,7 @@ export const imageVariants = {
       }
     }}
 
-export const smMdImageVariants = {
+export const smImageVariants = {
     open: {
         y: 0,
         opacity: 1,
@@ -89,7 +89,7 @@ export const spanVariants = {
     },
     closed: {
         opacity: 0,
-        y:'2rem',
+        y:'3rem',
         transition: {
             duration: 0.25
         }
@@ -108,7 +108,6 @@ export const smPlayerOpts = {
         fs: 0,
         rel: 0
     }}
-
 
 export const mdPlayerOpts = {
     height: '430px',

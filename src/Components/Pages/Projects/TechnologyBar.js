@@ -62,7 +62,7 @@ export default function TechnologyBar({ stack }) {
         }
     }, [stack])
   return (
-    <div className='flex flex-row flex-wrap items-start mb-1 space-x-1'>
+    <div className='flex flex-row flex-wrap items-start space-x-1'>
         {react && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
             <FaReact size={25} color='white'/>
         </div>}

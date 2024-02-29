@@ -15,7 +15,7 @@ import TechnologyBar from './TechnologyBar'
 
 // Import defined variants 
 import { overlayVariants, containerVariants, 
-  imageVariants, smMdImageVariants, 
+  imageVariants, smImageVariants, 
   contentVariants, spanVariants } from './variants';
 
 // Import playeropts
@@ -46,11 +46,11 @@ export default function ExpandedProjectTile({ project_id, project_data, selectCa
                 `${playerSize === 'sm' ?
                   'flex flex-col space-y-4 items-center' : 
                   'flex flex-row space-x-4'} 
-                 bg-[#5b6057] z-20 opacity-100 max-w-fit h-fit rounded-lg px-2 py-4 overflow-y-auto overflow-scroll`}>
+                 bg-[#5b6057] z-20 opacity-100 max-w-fit h-fit rounded-lg p-4 overflow-y-auto overflow-scroll`}>
                 
                 {/* Video Container */}
                 <motion.div
-                  variants={imageVariants}
+                  variants={playerSize === 'sm' ? smImageVariants : imageVariants}
                   className='w-fit bg-black rounded-lg flex items-center justify-center'>
                   {project_data.video_id !== '' && 
                     <>
