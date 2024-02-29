@@ -67,7 +67,7 @@ export default function MobileNavBar() {
                     animate = 'open'
                     initial = 'closed'
                     exit = 'closed'
-                    className='fixed flex flex-col justify-center inset-0 h-[100vh] w-[100vw] bg-[#2A3C3C] p-6'>
+                    className='fixed flex flex-col justify-center inset-0 h-[100vh] w-[100vw] bg-[#5b6057] p-6'>
                     <motion.div
                         variants = {{
                             open: { y: 0, opacity: 1 },

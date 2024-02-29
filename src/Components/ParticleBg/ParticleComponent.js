@@ -24,7 +24,8 @@ export default function ParticleComponent() {
             options={{
                 background: {
                     color: {
-                        value: "#2A3C3C",
+                        // value: "#2A3C3C",
+                        value: "#5b6057",
                         // value: "#000",
                         // value: '#18203A'
                         // value: '#0b3142'

@@ -15,6 +15,7 @@ export const data = {
         content: 'A full stack browser note-taking application that I developed.  Using the MERN stack I implemented all basic login, register, note taking and security features.',
         repo_link: 'https://github.com/willk0814/justNotes',
         demo_link: '',
+        video_id: 'CeKzDVw-Dqg',
         stack: ['JS', 'React', 'MongoDB', 'tailwind', 'Express', 'Mongoose', 'Jupyer']
         },
     'project_3' : {
@@ -39,13 +40,6 @@ export const data = {
         stack: ['Python']
         },
     'project_7': {
-        title: 'Sorting Visualizer',
-        content: 'A web app that demonstrates the steps taken by different comparison based sorting algorithms',
-        repo_link: 'https://github.com/willk0814/sorting_visualizer',
-        demo_link: 'https://willk0814.github.io/sorting_visualizer/',
-        stack: ['React', 'JS', 'tailwind']
-        },
-    'project_8': {
         title: 'Sorting Visualizer',
         content: 'A web app that demonstrates the steps taken by different comparison based sorting algorithms',
         repo_link: 'https://github.com/willk0814/sorting_visualizer',

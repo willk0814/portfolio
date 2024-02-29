@@ -12,7 +12,6 @@ import TitlePage from "./Components/Pages/TitlePage";
 import SkillsPage from "./Components/Pages/SkillsPage";
 import EducationPage from "./Components/Pages/EducationPage"
 import ExperiencePage from "./Components/Pages/ExperiencePage";
-// import ProjectsPage from "./Components/Pages/ProjectPage/ProjectsPage";
 import ContactMe from "./Components/Pages/ContactMe";
 
 // Import Project Page with animation carddsd

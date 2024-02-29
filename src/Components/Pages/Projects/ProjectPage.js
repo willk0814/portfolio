@@ -25,42 +25,46 @@ export default function ProjectPage() {
   return (
     <div className='pageContainer'>
       
-      {/* Title Container */}
-      <motion.div
-        initial={{ opacity: 0, y:'-2rem' }}
-        animate={{ opacity: 1, y:0 }}
-        transition={{ duration: 0.5}}>
-        <h1 className='text-white text-8xl'>Projects</h1>
-      </motion.div>
+      {/* Page Content Container */}
+      <div className='flex flex-col items-center justify-center w-[80vw]'>
 
-      {/* List of Collapsed Project Tiles */}
-      <motion.ul
-        initial={{ opacity: 0, y:'2rem' }}
-        animate={{ opacity: 1, y:0 }}
-        transition={{ duration: 0.5}}
-        className='w-[85vw] flex justify-center mt-3'>
-          <div className='flex flex-wrap'>
-            {Object.keys(data).map((card_id, ind) => {
-              let card = data[card_id]
-              return (
-                <CollapsedProjectTile
-                  key = {ind}
-                  project_id = {card_id}
-                  project_data = {card}
-                  selectCard = {handleSelectCard} />
-              )
-            })}
-        </div>
+        {/* Title */}
+        <motion.h1 
+          initial = {{ opacity: 0, y: '-2rem'}}
+          animate = {{ opacity: 1, y: 0 }}
+          transition = {{ duration: 0.5 }}
+          className='text-white text-8xl'>
+            Projects
+        </motion.h1>
 
-      </motion.ul>
+        {/* Project Tiles */}
+        <motion.div
+          initial = {{ opacity: 0, y: '2rem'}}
+          animate = {{ opacity: 1, y: 0 }}
+          transition = {{ duration: 0.5 }}
+          className='flex flex-wrap justify-center mt-4 border-2 border-white rounded-lg'>
+            
+              {Object.keys(data).map((card_id, ind) => {
+                let card_data = data[card_id]
+                return (
+                  <CollapsedProjectTile 
+                    key = {ind} 
+                    project_id = {card_id}
+                    project_data = {card_data}
+                    selectCard = {handleSelectCard} />
+                )
+              })}
+        </motion.div>
 
-      {/* Expanded Project Tile */}
-      {selectedId !== '' && 
-        <ExpandedProjectTile 
-          project_id = {selectedId}
-          project_data = {data[selectedId]}
-          selectCard = {handleSelectCard}/>
-      }
+        {/* Dimming Layer */}
+        {selectedId !== '' && 
+          <ExpandedProjectTile 
+            project_id = {selectedId} 
+            project_data = {data[selectedId]}
+            selectCard = {handleSelectCard} />
+          }
+      </div>
+      
     </div>
   )
 }

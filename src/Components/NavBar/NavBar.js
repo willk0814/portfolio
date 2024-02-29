@@ -44,7 +44,7 @@ export default function NavBar() {
     // useEffect to confirm location path
   return (
     <motion.div 
-        className='fixed left-0 w-full h-20 z-10 bg-[#2A3C3C]'
+        className='fixed left-0 w-full h-20 z-10 bg-[#5b6057]'
         initial = {{ y: '-100vh'}}
         animate = {{ y: 0 }}
         transition = {{ delay: 1, type: 'spring', bounce: 0.3 }}>
