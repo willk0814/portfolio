@@ -17,15 +17,15 @@ export const data = {
         repo_link: 'https://github.com/willk0814/justNotes',
         demo_link: '',
         video_id: 'CeKzDVw-Dqg',
-        stack: ['JS', 'React', 'MongoDB', 'tailwind', 'Express', 'Mongoose', 'Jupyer']
+        stack: ['JS', 'React', 'MongoDB', 'tailwind', 'Express', 'Mongoose', 'node']
         },
     'project_3' : {
         title: 'Pathfinder',
         content: 'A React application that I built in order to demonstrate how different pathfinding algorithms behave while searching through a grid.',
         repo_link: 'https://github.com/willk0814/pathfinder',
         demo_link: 'https://willk0814.github.io/pathfinder/',
-        video_id: 'zNvEhUeH3Mgs',
-        stack: ['TS', 'React', 'tailwind']
+        video_id: 'zNvEhUeH3Mg',
+        stack: ['TS', 'React', 'tailwind', 'node']
         },
     'project_4': {
         title: 'Written Numbers',
@@ -49,7 +49,7 @@ export const data = {
         repo_link: 'https://github.com/willk0814/sorting_visualizer',
         demo_link: 'https://willk0814.github.io/sorting_visualizer/',
         video_id: 'Xa8D1WPD8_I',
-        stack: ['React', 'JS', 'tailwind']
+        stack: ['React', 'JS', 'tailwind', 'node']
         },
     'project_8': {
         title: 'Command Line 2048',

@@ -52,7 +52,7 @@ export default function ExpandedProjectTile({ project_id, project_data, selectCa
                 {project_data.video_idd !== '' &&
                   <motion.div
                     variants={playerSize === 'sm' ? smImageVariants : imageVariants}
-                    className='w-fit bg-black rounded-lg flex items-center justify-center'>
+                    className='w-fit rounded-lg flex items-center justify-center'>
                     {project_data.video_id !== '' && 
                       <>
                         {playerSize === 'sm' &&

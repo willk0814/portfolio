@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import { FaReact, FaHtml5 } from 'react-icons/fa'
+import { FaReact, FaHtml5, FaNodeJs } from 'react-icons/fa'
 import { SiPython, SiMongodb, 
     SiTailwindcss, SiTypescript, 
     SiPytorch, SiTensorflow,
@@ -29,6 +29,7 @@ export default function TechnologyBar({ stack }) {
     const [jupyter, setJupyter] = useState(false)
     const [HTML, setHTML] = useState(false)
     const [CSS, setCSS] = useState(false)
+    const [node, setNode] = useState(false)
 
     useEffect(() => {
         for (const technology of stack) {
@@ -64,6 +65,8 @@ export default function TechnologyBar({ stack }) {
                 setCSS(true)
             } else if (technology === 'HTML') {
                 setHTML(true)
+            } else if (technology === 'node') {
+                setNode(true)
             } else {
                 console.log('Unrecognized')
             }
@@ -81,14 +84,6 @@ export default function TechnologyBar({ stack }) {
 
         {reactNative && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
             <TbBrandReactNative size={25} color='white' />
-        </div>}
-
-        {express && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
-            <h2 className='text-white'>Express.js</h2>
-        </div>}
-
-        {mongoose && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
-            <h2 className='text-white'>Mongoose.js</h2>
         </div>}
 
         {mongoDB && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
@@ -133,6 +128,18 @@ export default function TechnologyBar({ stack }) {
 
         {HTML && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
             <FaHtml5 size={25} color='white' />
+        </div>}
+
+        {node && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+            <FaNodeJs size={25} color='white' />
+        </div>}
+
+        {express && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+            <h2 className='text-white'>Express.js</h2>
+        </div>}
+
+        {mongoose && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+            <h2 className='text-white'>Mongoose.js</h2>
         </div>}
     </div>
   )
