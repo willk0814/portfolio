@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 // Import data from assets
 import { data } from '../../../assets/projectData'
@@ -13,6 +13,7 @@ import CollapsedProjectTile from './CollapsedProjectTile'
 export default function ProjectPage() {
 
   const [selectedId, setSelectedId] = useState('')
+  const [playerSize, setPlayerSize] = useState('')
 
   const handleSelectCard = (project_id) => {
     if (selectedId === project_id){
@@ -21,6 +22,25 @@ export default function ProjectPage() {
       setSelectedId(project_id)
     }
   }
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth
+
+      if (screenWidth > 1005){
+        setPlayerSize('full')
+      } else if (screenWidth <= 1005 && screenWidth > 600) {
+        setPlayerSize('md')
+      } else {
+        setPlayerSize('sm')
+      }
+    }
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
   return (
     <div className='pageContainer'>
@@ -61,7 +81,8 @@ export default function ProjectPage() {
           <ExpandedProjectTile 
             project_id = {selectedId} 
             project_data = {data[selectedId]}
-            selectCard = {handleSelectCard} />
+            selectCard = {handleSelectCard}
+            playerSize = {playerSize} />
           }
       </div>
       

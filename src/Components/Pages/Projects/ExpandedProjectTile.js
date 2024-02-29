@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 
 // Framer motion import
 import { motion, AnimatePresence } from 'framer-motion'
@@ -13,78 +13,17 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 // Import Created Technology Stack Component
 import TechnologyBar from './TechnologyBar'
 
-export default function ExpandedProjectTile({ project_id, project_data, selectCard }) {
+// Import defined variants 
+import { overlayVariants, containerVariants, 
+  imageVariants, smMdImageVariants, 
+  contentVariants, spanVariants } from './variants';
 
-  const overlayVariants = {
-    open: {
-      background: 'rgba(0, 0, 0, 0.7)',
-      transition: {
-        duration: 0.25,
-        when: 'beforeChildren'
-      }
-    },
-    closed: {
-      background: 'rgba(0, 0, 0, 0)',
-      transition: {
-        duration: 0.25,
-        when: 'afterChildren'
-      }
-    }}
+// Import playeropts
+import { smPlayerOpts, mdPlayerOpts, lgPlayerOpts} from './variants'
 
-  const containerVariants = {
-    open: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.25,
-        when: 'beforeChildren',
-        staggerChildren: 0.2
-      }
-    },
-    closed: {
-      opacity: 0,
-      y: '-2rem',
-      transition: {
-        duration: 0.25
-      }
-    }
-  }
 
-  const imageVariants = {
-    open: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.3
-      }
-    },
-    closed: {
-      x: '-2rem',
-      opacity: 0,
-      transition: {
 
-      }
-    }
-  }
-
-  const contentVariants = {
-    open: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.3
-      }
-    },
-    closed: {
-      opacity: 0,
-      x: '2rem',
-      transition: {
-        duration: 0.25
-      }
-    }
-  }
-
-  let path = '../../../'
+export default function ExpandedProjectTile({ project_id, project_data, selectCard, playerSize }) {
 
   return (
     <AnimatePresence>
@@ -96,43 +35,66 @@ export default function ExpandedProjectTile({ project_id, project_data, selectCa
             animate='open'
             exit='closed'
             onClick= {() => selectCard(project_id)}
-            className='fixed inset-0 w-[100vw] h-[100vh] z-10 flex items-center justify-center'
+            className='fixed inset-0 w-[100vw] h-[100vh] z-10 flex items-center justify-center p-5'
             >
 
             {/* Card Container */}
             <motion.div
               key='focusedView'
               variants={containerVariants}
-              className='bg-[#5b6057] z-20 flex flex-row opacity-100 min-w-[300px] w-[65vw] h-[600px] rounded-lg p-8 space-x-4'>
+              className={
+                `${playerSize === 'sm' ?
+                  'flex flex-col space-y-4 items-center' : 
+                  'flex flex-row space-x-4'} 
+                 bg-[#5b6057] z-20 opacity-100 max-w-fit h-fit rounded-lg px-2 py-4 overflow-y-auto overflow-scroll`}>
                 
-                {/* Image Container */}
+                {/* Video Container */}
                 <motion.div
                   variants={imageVariants}
-                  className='w-2/3 h-[100%] bg-black rounded-md flex items-center justify-center'>
-                  {project_data.video_id && 
-                    <Youtube 
-                      videoId={project_data.video_id} 
-                      opts={{
-                        playerVars: {
-                         autoplay: 1
-                        }
-                      }}/>}
+                  className='w-fit bg-black rounded-lg flex items-center justify-center'>
+                  {project_data.video_id !== '' && 
+                    <>
+                      {playerSize === 'sm' &&
+                        <Youtube 
+                          style={{ borderRadius: '15px', overflow: 'hidden'}}
+                          videoId={project_data.video_id} 
+                          opts={smPlayerOpts}/>}
+                      
+                      {playerSize === 'md' &&
+                        <Youtube 
+                          style={{ borderRadius: '15px', overflow: 'hidden'}}
+                          videoId={project_data.video_id} 
+                          opts={mdPlayerOpts}/>}
+
+                      {playerSize === 'full' &&
+                        <Youtube 
+                          style={{ borderRadius: '15px', overflow: 'hidden'}}
+                          videoId={project_data.video_id} 
+                          opts={lgPlayerOpts}/>}
+                    </>}
+
                 </motion.div>
 
                 {/* Details Container */}
                 <motion.div 
-                  className='flex flex-col w-1/3 space-y-4'>
+                  className='flex flex-col max-w-[300px] w-fit'>
 
                   {/* Title */}
                   <motion.div
-                    variants={contentVariants}>
-                      <motion.h1 className='text-white text-5xl'>{project_data.title}</motion.h1>
+                    variants={contentVariants}
+                    className='mb-1'>
+                      <motion.h1 
+                        className={`text-white ${playerSize === 'sm' ? 'text-2xl':'text-5xl'}`}>{project_data.title}</motion.h1>
                   </motion.div>
+
+                  <motion.span 
+                    variants={spanVariants} 
+                    className='w-[100%] h-[1px] bg-white mb-3'></motion.span>
 
                   {/* Buttons */}
                   <motion.div
                     variants={contentVariants}
-                    className='flex flex-row space-x-2'>
+                    className='flex flex-row space-x-2 mb-1'>
                       {/* Github Link */}
                       <motion.a
                         href={project_data.repo_link}
@@ -157,16 +119,23 @@ export default function ExpandedProjectTile({ project_id, project_data, selectCa
                         </motion.a>
                        }
                   </motion.div>
+                  <motion.span 
+                    variants={spanVariants} 
+                    className='w-[100%] h-[1px] bg-white mb-3'></motion.span>
 
                   {/* Technology Stack */}
                   <motion.div variants={contentVariants}>
                     <TechnologyBar stack = {project_data.stack} />
                   </motion.div>
 
+                  <motion.span 
+                    variants={spanVariants} 
+                    className='w-[100%] h-[1px] bg-white mb-3'></motion.span>
+
                   {/* Content */}
                   <motion.div 
                     variants={contentVariants}
-                    className='text-white text-xl'>
+                    className={`text-white ${playerSize === 'sm' ? 'text-lg':'text-xl'}`}>
                       {project_data.content}
                   </motion.div>
 

@@ -8,6 +8,7 @@ export const data = {
         content: 'An application developed using React Native to allow researchers to control and collect information from robots via Bluetooth.  The app was succsefully deployed to multiple iPads around the lab as well as delivered to a fortune 500 client.',
         repo_link: 'https://github.com/willk0814/DeviceControllerApp',
         demo_link: '',
+        video_id: 'vc_H3_WQKBI',
         stack: ['JS', 'ReactNative']
         },
     'project_2': {
@@ -23,6 +24,7 @@ export const data = {
         content: 'A React application that I built in order to demonstrate how different pathfinding algorithms behave while searching through a grid.',
         repo_link: 'https://github.com/willk0814/pathfinder',
         demo_link: 'https://willk0814.github.io/pathfinder/',
+        video_id: '',
         stack: ['TS', 'React', 'tailwind']
         },
     'project_4': {
@@ -30,6 +32,7 @@ export const data = {
         content: 'A neural network that I trained to recognize handwritten numbers 0-9',
         repo_link: 'https://github.com/willk0814/numberRecognition',
         demo_link: '',
+        video_id: '',
         stack: ['Python', 'NumPy', 'Jupyter']
         },
     'project_6': {
@@ -37,6 +40,7 @@ export const data = {
         content: 'An airline upgrade system that efficiently manages the priority of passengers using a hard coded AVL Tree with all necessary methods implemented',
         repo_link: 'https://github.com/willk0814/UpgradeSystem',
         demo_link: '',
+        video_id: '',
         stack: ['Python']
         },
     'project_7': {
@@ -44,6 +48,7 @@ export const data = {
         content: 'A web app that demonstrates the steps taken by different comparison based sorting algorithms',
         repo_link: 'https://github.com/willk0814/sorting_visualizer',
         demo_link: 'https://willk0814.github.io/sorting_visualizer/',
+        video_id: 'Xa8D1WPD8_I',
         stack: ['React', 'JS', 'tailwind']
         }
     }
