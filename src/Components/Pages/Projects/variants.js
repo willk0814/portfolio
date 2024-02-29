@@ -122,8 +122,8 @@ export const mdPlayerOpts = {
     }}
 
 export const lgPlayerOpts = {
-    height: '640px',
-    width: '600px',
+    height: '600px',
+    width: '580px',
     playerVars: {
         autoplay: 1,
         controls: 0,
