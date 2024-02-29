@@ -24,7 +24,7 @@ export const data = {
         content: 'A React application that I built in order to demonstrate how different pathfinding algorithms behave while searching through a grid.',
         repo_link: 'https://github.com/willk0814/pathfinder',
         demo_link: 'https://willk0814.github.io/pathfinder/',
-        video_id: '',
+        video_id: 'zNvEhUeH3Mgs',
         stack: ['TS', 'React', 'tailwind']
         },
     'project_4': {
