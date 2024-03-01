@@ -19,7 +19,7 @@ export default function TitlePage() {
 
           {/* Name Title */}
           <motion.h1 
-            className='text-white text-9xl mb-3 font-light text-center'
+            className='text-white md:text-9xl text-6xl mb-3 font-light text-center'
             initial = {{ opacity: 0, y: '-2rem' }}
             animate = {{ opacity: 1, y: 0 }}
             transition = {{ duration: 1 }}>
@@ -31,7 +31,7 @@ export default function TitlePage() {
             initial = {{ opacity: 0 }}
             animate = {{ opacity: 1 }}
             transition = {{ duration: 1 }}>
-            <p className='text-white text-2xl p-2'>
+            <p className='text-white md:text-2xl text-xl p-2'>
               Hi! My name is Will and I am a full stack Software Engineer with experience building dynamic web and mobile applications using JavaScript and React as well as implementing Machine Learning algorithms using Python.  I am interested in the applications of Machine Learning to so many of our daily tasks, how can we leverage data to learn more about seemingly mundane tasks?
             </p>
           </motion.div>

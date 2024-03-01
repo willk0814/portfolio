@@ -46,7 +46,7 @@ export default function ExpandedProjectTile({ project_id, project_data, selectCa
                 `${playerSize === 'sm' ?
                   'flex flex-col space-y-4 items-center' : 
                   'flex flex-row space-x-4'} 
-                 bg-[#5b6057] z-20 opacity-100 max-w-fit h-fit rounded-lg p-4`}>
+                 bg-[#323330] z-20 opacity-100 max-w-fit h-fit rounded-lg p-4`}>
                 
                 {/* Video Container */}
                 {project_data.video_idd !== '' &&

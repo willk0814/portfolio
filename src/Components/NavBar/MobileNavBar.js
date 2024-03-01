@@ -67,7 +67,7 @@ export default function MobileNavBar() {
                     animate = 'open'
                     initial = 'closed'
                     exit = 'closed'
-                    className='fixed flex flex-col justify-center inset-0 h-[100vh] w-[100vw] bg-[#5b6057] p-6'>
+                    className='fixed flex flex-col justify-center inset-0 h-[100vh] w-[100vw] bg-[#323330] p-6'>
                     <motion.div
                         variants = {{
                             open: { y: 0, opacity: 1 },
@@ -149,6 +149,23 @@ export default function MobileNavBar() {
                             rel='noopener noreferrer'
                             whileHover = {{ boxShadow: '0px 0px 8px rgb(255, 255, 255)'}}>
                             <HiOutlineDocumentText className='cursor-pointer' size={70} color='white'/>
+                        </motion.a>
+                    </motion.div>
+                    
+                    {/* Background Photo Credits */}
+                    <motion.div
+                        variants = {{
+                            open: { y: 0, opacity: 1 },
+                            closed: { y: '25%', opacity: 0 }
+                        }}>
+                        <motion.p 
+                            className='text-white italic inline'>
+                                The amazing background photo comes from VentiViews, you can find their work
+                        </motion.p>
+                        <motion.a
+                            href='https://unsplash.com/@ventiviews'
+                            className='text-white italic underline pl-2 font-semibold'>
+                                here
                         </motion.a>
                     </motion.div>
                 </motion.div>

@@ -1,8 +1,9 @@
 // Import React Router
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Import Particle Component for Background
-import ParticleComponent from "./Components/ParticleBg/ParticleComponent";
+// Import Background
+import ParticleComponent from "./Components/Backgrounds/ParticleBg/ParticleComponent";
+import BackgroundContainer from "./Components/Backgrounds/PictureBg/BackgroundContainer";
 
 // Import NavBar Component
 import NavBar from "./Components/NavBar/NavBar";
@@ -22,7 +23,8 @@ function App() {
   return (
     <Router>
       <div className='relative'>
-        <ParticleComponent />
+        {/* <ParticleComponent /> */}
+        <BackgroundContainer />
         <div className='relative'>
           <NavBar />
           <Routes>
