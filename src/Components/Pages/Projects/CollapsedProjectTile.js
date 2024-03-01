@@ -11,7 +11,7 @@ export default function CollapsedProjectTile({ project_id, project_data, selectC
       onClick = {() => selectCard(project_id)}>
   
       {/* Project Title */}
-      <h1 className='text-white text-4xl'>{project_data.title}</h1>
+      <h1 className={`text-white ${cardSize === 'sm' ? 'text-4xl' : 'text-[3.5rem] leading-[3.5rem] font-semibold'}`}>{project_data.title}</h1>
     </motion.div>
   )
 }

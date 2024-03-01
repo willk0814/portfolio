@@ -5,7 +5,7 @@ import { SiPython, SiMongodb,
     SiTailwindcss, SiTypescript, 
     SiPytorch, SiTensorflow,
     SiNumpy, SiPandas,
-    SiJupyter } from "react-icons/si";
+    SiJupyter, SiFramer } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { IoLogoJavascript } from "react-icons/io5";
 import { IoLogoCss3 } from "react-icons/io";
@@ -30,6 +30,7 @@ export default function TechnologyBar({ stack }) {
     const [HTML, setHTML] = useState(false)
     const [CSS, setCSS] = useState(false)
     const [node, setNode] = useState(false)
+    const [framer, setFramer] = useState(false)
 
     useEffect(() => {
         for (const technology of stack) {
@@ -67,6 +68,8 @@ export default function TechnologyBar({ stack }) {
                 setHTML(true)
             } else if (technology === 'node') {
                 setNode(true)
+            } else if (technology === 'framer'){
+                setFramer(true)
             } else {
                 console.log('Unrecognized')
             }
@@ -132,6 +135,10 @@ export default function TechnologyBar({ stack }) {
 
         {node && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
             <FaNodeJs size={25} color='white' />
+        </div>}
+
+        {framer && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+            <SiFramer size={25} color='white' />
         </div>}
 
         {express && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>

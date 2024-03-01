@@ -130,5 +130,6 @@ export const lgPlayerOpts = {
         loop: 1,
         showinfo: 0,
         fs: 0,
-        rel: 0
+        rel: 0,
+        color: 'black'
     }}

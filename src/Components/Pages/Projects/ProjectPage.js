@@ -75,7 +75,7 @@ export default function ProjectPage() {
     <div className='pageContainer'>
       
       {/* Page Content Container */}
-      <div className='flex flex-col items-center justify-center w-[80vw]'>
+      <div className='flex flex-col items-center justify-center w-[85vw]'>
 
         {/* Title */}
         <motion.h1 

@@ -60,6 +60,14 @@ export const data = {
         stack: ['Python']
         },
     'project_9': {
+        title: 'Personal Portfolio',
+        content: 'This website!  I built this website from scratch and I am continuing to add new features all the time.',
+        repo_link: 'https://github.com/willk0814/portfolio',
+        demo_link: 'https://willk0814.github.io/portfolio',
+        video_id: '',
+        stack: ['JS', 'React', 'node', 'tailwind', 'framer']
+        },
+    'project_10': {
         title: 'Space Invaders',
         content: 'A web app that enables the user to play space invaders and record their scores to the leader board',
         repo_link: 'https://github.com/willk0814/CommandLine_2048',
