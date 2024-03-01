@@ -26,9 +26,9 @@ export default function ProjectPage() {
 
   const [cardSize, setCardSize] = useState('sm')
   const [filterSettings, setFilterSettings] = useState({
-    react: true,
-    python: true,
-    js: true
+    React: true,
+    Python: true,
+    JS: true
   })
 
   const handleSetCardSize = (size) => {
@@ -86,6 +86,7 @@ export default function ProjectPage() {
             Projects
         </motion.h1>
 
+        {/* Viewing Controls Container */}
         <motion.div 
           className='flex flex-row space-x-2 items-center justify-center border-white mt-2'
           initial = {{ opacity: 0, y: '-2rem'}}
@@ -109,20 +110,20 @@ export default function ProjectPage() {
             {/* Language Filter */}
             <div className='flex flex-row blurredContentContainer'>
               <div 
-                className={`${filterSettings.react ? 'bg-black' : ''} p-2 px-4 cursor-pointer`}
-                onClick={() => handleChangeFilter('react')}>
+                className={`${filterSettings['React'] ? 'bg-black' : ''} p-2 px-4 cursor-pointer`}
+                onClick={() => handleChangeFilter('React')}>
                 <FaReact color='white' size={35} />
               </div>
 
               <div 
-                className={`${filterSettings.python ? 'bg-black' : ''} p-2 px-4 cursor-pointer`}
-                onClick={() => handleChangeFilter('python')}>
+                className={`${filterSettings['Python'] ? 'bg-black' : ''} p-2 px-4 cursor-pointer`}
+                onClick={() => handleChangeFilter('Python')}>
                 <SiPython color='white' size={35} />
               </div>
 
               <div 
-                className={`${filterSettings.js ? 'bg-black' : ''} p-2 px-4 cursor-pointer`}
-                onClick={() => handleChangeFilter('js')}>
+                className={`${filterSettings['JS'] ? 'bg-black' : ''} p-2 px-4 cursor-pointer`}
+                onClick={() => handleChangeFilter('JS')}>
                 <IoLogoJavascript color='white' size={35} />
               </div>
             </div>
@@ -137,17 +138,23 @@ export default function ProjectPage() {
             
               {Object.keys(data).map((card_id, ind) => {
                 let card_data = data[card_id]
+                let jsxElements = []
                 
-                
-
-                return (
-                  <CollapsedProjectTile 
-                    key = {ind} 
-                    project_id = {card_id}
-                    project_data = {card_data}
-                    selectCard = {handleSelectCard} />
-                )
-              })}
+                for (const tech of card_data.stack) {
+                  if (filterSettings[tech]) {
+                    jsxElements.push(
+                      <CollapsedProjectTile 
+                        key = {ind} 
+                        project_id = {card_id}
+                        project_data = {card_data}
+                        selectCard = {handleSelectCard}
+                        cardSize = {cardSize} />
+                      )
+                    break
+                    }
+                  }
+                return jsxElements
+                })}
         </motion.div>
 
         {/* Dimming Layer */}
