@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react'
 
 import { FaReact, FaHtml5, FaNodeJs } from 'react-icons/fa'
-import { SiPython, SiMongodb, 
-    SiTailwindcss, SiTypescript, 
-    SiPytorch, SiTensorflow,
-    SiNumpy, SiPandas,
-    SiJupyter, SiFramer } from "react-icons/si";
+import { SiPython, SiMongodb, SiTailwindcss, 
+    SiTypescript, SiPytorch, SiTensorflow, 
+    SiNumpy,SiPandas, SiJupyter, SiFramer } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { IoLogoJavascript } from "react-icons/io5";
 import { IoLogoCss3 } from "react-icons/io";
 
 
 
-export default function TechnologyBar({ stack }) {
+export default function TechnologyBar({ stack, full }) {
+    
+    // State Vars for Technologies
     const [python, setPython] = useState(false)
     const [JS, setJS] = useState(false)
     const [TS, setTS] = useState(false)
@@ -31,50 +31,105 @@ export default function TechnologyBar({ stack }) {
     const [CSS, setCSS] = useState(false)
     const [node, setNode] = useState(false)
     const [framer, setFramer] = useState(false)
+    const [overflow, setOverflow] = useState(false)
 
     useEffect(() => {
-        for (const technology of stack) {
-            if (technology === 'JS') {
-                setJS(true)
-            } else if (technology === 'TS'){
-                setTS(true)
-            } else if (technology === 'tailwind'){
-                setTailwind(true)
-            } else if (technology === 'ReactNative') {
-                setReactNative(true)
-            } else if (technology === 'React') {
-                setReact(true)
-            } else if (technology === 'Express') {
-                setExpress(true)
-            } else if (technology === 'Mongoose') {
-                setMongoose(true)
-            } else if (technology === 'MongoDB') {
-                setMongoDB(true)
-            } else if (technology === 'Python') {
-                setPython(true)
-            } else if (technology === 'PyTorch'){
-                setPyTorch(true)
-            } else if (technology === 'TensorFlow'){
-                setTensorFlow(true)
-            } else if (technology === 'NumPy'){
-                setNumPy(true)
-            } else if (technology === 'Pandas'){
-                setPandas(true)
-            } else if (technology === 'Jupyter') {
-                setJupyter(true)
-            } else if (technology === 'CSS'){
-                setCSS(true)
-            } else if (technology === 'HTML') {
-                setHTML(true)
-            } else if (technology === 'node') {
-                setNode(true)
-            } else if (technology === 'framer'){
-                setFramer(true)
-            } else {
-                console.log('Unrecognized')
+        // Create a copy of the stack
+        let displayStack = [...stack];
+    
+        // Check if we want the full stack
+        if (!full && stack.length > 3) {
+            // Construct abbreviated stack
+            displayStack = stack.slice(0, 3);
+            displayStack.push('overflow');
+        }
+    
+        // Reset all state variables
+        setPython(false);
+        setJS(false);
+        setTS(false);
+        setTailwind(false);
+        setReact(false);
+        setReactNative(false);
+        setExpress(false);
+        setMongoDB(false);
+        setMongoose(false);
+        setPyTorch(false);
+        setTensorFlow(false);
+        setNumPy(false);
+        setPandas(false);
+        setJupyter(false);
+        setHTML(false);
+        setCSS(false);
+        setNode(false);
+        setFramer(false);
+        setOverflow(false);
+    
+        // Set state variables based on displayStack
+        for (const technology of displayStack) {
+            switch (technology) {
+                case 'JS':
+                    setJS(true);
+                    break;
+                case 'TS':
+                    setTS(true);
+                    break;
+                case 'tailwind':
+                    setTailwind(true);
+                    break;
+                case 'ReactNative':
+                    setReactNative(true);
+                    break;
+                case 'React':
+                    setReact(true);
+                    break;
+                case 'Express':
+                    setExpress(true);
+                    break;
+                case 'Mongoose':
+                    setMongoose(true);
+                    break;
+                case 'MongoDB':
+                    setMongoDB(true);
+                    break;
+                case 'Python':
+                    setPython(true);
+                    break;
+                case 'PyTorch':
+                    setPyTorch(true);
+                    break;
+                case 'TensorFlow':
+                    setTensorFlow(true);
+                    break;
+                case 'NumPy':
+                    setNumPy(true);
+                    break;
+                case 'Pandas':
+                    setPandas(true);
+                    break;
+                case 'Jupyter':
+                    setJupyter(true);
+                    break;
+                case 'CSS':
+                    setCSS(true);
+                    break;
+                case 'HTML':
+                    setHTML(true);
+                    break;
+                case 'node':
+                    setNode(true);
+                    break;
+                case 'framer':
+                    setFramer(true);
+                    break;
+                case 'overflow':
+                    setOverflow(true);
+                    break;
+                default:
+                    console.log('Unrecognized technology: ', technology);
             }
         }
-    }, [stack])
+    }, [stack, full]);
   return (
     <div className='flex flex-row flex-wrap items-start space-x-1'>
         {react && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
@@ -147,6 +202,10 @@ export default function TechnologyBar({ stack }) {
 
         {mongoose && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
             <h2 className='text-white'>Mongoose.js</h2>
+        </div>}
+
+        {overflow && <div className='flex w-fit items-start py-2 mb-1'>
+            <h2 className='text-white'>...</h2>
         </div>}
     </div>
   )

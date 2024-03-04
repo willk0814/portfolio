@@ -125,7 +125,9 @@ export default function ExpandedProjectTile({ project_id, project_data, selectCa
 
                   {/* Technology Stack */}
                   <motion.div variants={contentVariants}>
-                    <TechnologyBar stack = {project_data.stack} />
+                    <TechnologyBar 
+                      stack = {project_data.stack} 
+                      full={true}/>
                   </motion.div>
 
                   <motion.span 
