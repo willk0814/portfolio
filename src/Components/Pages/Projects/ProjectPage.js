@@ -7,8 +7,8 @@ import { data } from '../../../assets/projectData'
 import { motion } from 'framer-motion'
 
 // Import project tile component
-import ExpandedProjectTile from './ExpandedProjectTile'
-import CollapsedProjectTile from './CollapsedProjectTile'
+import ExpandedProjectTile from './Tiles/ExpandedProjectTile'
+import CollapsedProjectTile from './Tiles/CollapsedProjectTile'
 
 // Import Icons
 import { HiSquares2X2 } from "react-icons/hi2";
@@ -72,10 +72,10 @@ export default function ProjectPage() {
   }, [])
 
   return (
-    <div className='pageContainer'>
+    <div className='pageContainer justify-start'>
       
       {/* Page Content Container */}
-      <div className='flex flex-col items-center justify-center w-[85vw]'>
+      <div className='flex flex-col items-center justify-start w-[90vw]'>
 
         {/* Title */}
         <motion.h1 
@@ -93,38 +93,44 @@ export default function ProjectPage() {
           animate = {{ opacity: 1, y: 0}}
           transition = {{ duration: 0.5 }}>
             {/* Size Control */}
-            <div className='flex flex-row blurredContentContainer'>
-              <div 
-                className={`${cardSize === 'sm' ? 'bg-black' : ''} p-2 px-4 cursor-pointer`}
-                onClick={() => handleSetCardSize('sm')}>
-                <HiSquares2X2 color='white' size={35} />
-              </div>
+            <div className='flex flex-col'>
+              <h1 className='text-white text-2xl'>Card Size:</h1>
+              <div className='flex flex-row blurredContentContainer border-2 border-black'>
+                <div 
+                  className={`${cardSize === 'sm' ? 'bg-black' : ''} p-2 px-4 cursor-pointer`}
+                  onClick={() => handleSetCardSize('sm')}>
+                  <HiSquares2X2 color='white' size={35} />
+                </div>
 
-              <div 
-                className={`${cardSize === 'lg' ? 'bg-black' : ''} p-2 px-4 cursor-pointer`}
-                onClick={() => handleSetCardSize('lg')}>
-                <PiSquareSplitHorizontalFill color='white' size={35} />
+                <div 
+                  className={`${cardSize === 'lg' ? 'bg-black' : ''} p-2 px-4 cursor-pointer`}
+                  onClick={() => handleSetCardSize('lg')}>
+                  <PiSquareSplitHorizontalFill color='white' size={35} />
+                </div>
               </div>
             </div>
 
             {/* Language Filter */}
-            <div className='flex flex-row blurredContentContainer'>
-              <div 
-                className={`${filterSettings['React'] ? 'bg-black' : ''} p-2 px-4 cursor-pointer`}
-                onClick={() => handleChangeFilter('React')}>
-                <FaReact color='white' size={35} />
-              </div>
+            <div className='flex flex-col'>
+              <h1 className='text-white text-2xl'>Language Filter:</h1>
+              <div className='flex flex-row blurredContentContainer border-2 border-black'>
+                <div 
+                  className={`${filterSettings['React'] ? 'bg-black' : ''} p-2 px-4 cursor-pointer`}
+                  onClick={() => handleChangeFilter('React')}>
+                  <FaReact color='white' size={35} />
+                </div>
 
-              <div 
-                className={`${filterSettings['Python'] ? 'bg-black' : ''} p-2 px-4 cursor-pointer`}
-                onClick={() => handleChangeFilter('Python')}>
-                <SiPython color='white' size={35} />
-              </div>
+                <div 
+                  className={`${filterSettings['Python'] ? 'bg-black' : ''} p-2 px-4 cursor-pointer`}
+                  onClick={() => handleChangeFilter('Python')}>
+                  <SiPython color='white' size={35} />
+                </div>
 
-              <div 
-                className={`${filterSettings['JS'] ? 'bg-black' : ''} p-2 px-4 cursor-pointer`}
-                onClick={() => handleChangeFilter('JS')}>
-                <IoLogoJavascript color='white' size={35} />
+                <div 
+                  className={`${filterSettings['JS'] ? 'bg-black' : ''} p-2 px-4 cursor-pointer`}
+                  onClick={() => handleChangeFilter('JS')}>
+                  <IoLogoJavascript color='white' size={35} />
+                </div>
               </div>
             </div>
         </motion.div>

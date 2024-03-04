@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 // Framer motion import
 import { motion, AnimatePresence } from 'framer-motion'
@@ -20,7 +20,6 @@ import { overlayVariants, containerVariants,
 
 // Import playeropts
 import { smPlayerOpts, mdPlayerOpts, lgPlayerOpts} from './variants'
-
 
 
 export default function ExpandedProjectTile({ project_id, project_data, selectCard, playerSize }) {
