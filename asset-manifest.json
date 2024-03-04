@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.a9607d37.css",
-    "main.js": "/portfolio/static/js/main.a3568ead.js",
+    "main.css": "/portfolio/static/css/main.28b36dbd.css",
+    "main.js": "/portfolio/static/js/main.a91e9baa.js",
     "static/js/787.e02c0aaf.chunk.js": "/portfolio/static/js/787.e02c0aaf.chunk.js",
     "static/media/neom-TA5hw14Coh4-unsplash.jpg": "/portfolio/static/media/neom-TA5hw14Coh4-unsplash.d3a815b16c119843b465.jpg",
     "static/media/andrew-neel-jtsW--Z6bFw-unsplash.jpg": "/portfolio/static/media/andrew-neel-jtsW--Z6bFw-unsplash.04eb0e4a829bb61252d7.jpg",
+    "static/media/ganapathy-kumar-L75D18aVal8-unsplash.jpg": "/portfolio/static/media/ganapathy-kumar-L75D18aVal8-unsplash.6880c00fd00575916723.jpg",
     "static/media/venti-views-35uZM_4wjYg-unsplash.jpg": "/portfolio/static/media/venti-views-35uZM_4wjYg-unsplash.a24fefed1e085d5f79d0.jpg",
     "static/media/Koenig_Resume.pdf": "/portfolio/static/media/Koenig_Resume.b7609ab5770428af4985.pdf",
     "index.html": "/portfolio/index.html",
-    "main.a9607d37.css.map": "/portfolio/static/css/main.a9607d37.css.map",
-    "main.a3568ead.js.map": "/portfolio/static/js/main.a3568ead.js.map",
+    "main.28b36dbd.css.map": "/portfolio/static/css/main.28b36dbd.css.map",
+    "main.a91e9baa.js.map": "/portfolio/static/js/main.a91e9baa.js.map",
     "787.e02c0aaf.chunk.js.map": "/portfolio/static/js/787.e02c0aaf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9607d37.css",
-    "static/js/main.a3568ead.js"
+    "static/css/main.28b36dbd.css",
+    "static/js/main.a91e9baa.js"
   ]
 }
