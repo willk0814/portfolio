@@ -131,80 +131,80 @@ export default function TechnologyBar({ stack, full }) {
         }
     }, [stack, full]);
   return (
-    <div className='flex flex-row flex-wrap items-start space-x-1'>
-        {react && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+    <div className='flex flex-row flex-wrap items-start'>
+        {react && <div className='blurredContentContainer w-fit items-start p-2 mr-1 mb-1'>
             <FaReact size={25} color='white'/>
         </div>}
 
-        {python && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+        {python && <div className='blurredContentContainer w-fit items-start p-2 mr-1 mb-1'>
             <SiPython size={25} color='white' />
         </div>}
 
-        {reactNative && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+        {reactNative && <div className='blurredContentContainer w-fit items-start p-2 mr-1 mb-1'>
             <TbBrandReactNative size={25} color='white' />
         </div>}
 
-        {mongoDB && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+        {mongoDB && <div className='blurredContentContainer w-fit items-start p-2 mr-1 mb-1'>
             <SiMongodb size={25} color='white' />
         </div>}
 
-        {tailwind && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+        {tailwind && <div className='blurredContentContainer w-fit items-start p-2 mr-1 mb-1'>
             <SiTailwindcss size={25} color='white' />
         </div>}
 
-        {JS && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+        {JS && <div className='blurredContentContainer w-fit items-start p-2 mr-1 mb-1'>
             <IoLogoJavascript size={25} color='white' />
         </div>}
 
-        {TS && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+        {TS && <div className='blurredContentContainer w-fit items-start p-2 mr-1 mb-1'>
             <SiTypescript size={25} color='white' />
         </div>}
 
-        {pyTorch && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+        {pyTorch && <div className='blurredContentContainer w-fit items-start p-2 mr-1 mb-1'>
             <SiPytorch size={25} color='white' />
         </div>}
 
-        {tensorFlow && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+        {tensorFlow && <div className='blurredContentContainer w-fit items-start p-2 mr-1 mb-1'>
             <SiTensorflow size={25} color='white' />
         </div>}
 
-        {numPy && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+        {numPy && <div className='blurredContentContainer w-fit items-start p-2 mr-1 mb-1'>
             <SiNumpy size={25} color='white' />
         </div>}
 
-        {pandas && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+        {pandas && <div className='blurredContentContainer w-fit items-start p-2 mr-1 mb-1'>
             <SiPandas size={25} color='white' />
         </div>}
 
-        {jupyter && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+        {jupyter && <div className='blurredContentContainer w-fit items-start p-2 mr-1 mb-1'>
             <SiJupyter size={25} color='white' />
         </div>}
         
-        {CSS && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+        {CSS && <div className='blurredContentContainer w-fit items-start p-2 mr-1 mb-1'>
             <IoLogoCss3 size={25} color='white' />
         </div>}
 
-        {HTML && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+        {HTML && <div className='blurredContentContainer w-fit items-start p-2 mr-1 mb-1'>
             <FaHtml5 size={25} color='white' />
         </div>}
 
-        {node && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+        {node && <div className='blurredContentContainer w-fit items-start p-2 mr-1 mb-1'>
             <FaNodeJs size={25} color='white' />
         </div>}
 
-        {framer && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+        {framer && <div className='blurredContentContainer w-fit items-start p-2 mr-1 mb-1'>
             <SiFramer size={25} color='white' />
         </div>}
 
-        {express && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+        {express && <div className='blurredContentContainer w-fit items-start p-2 mr-1 mb-1'>
             <h2 className='text-white'>Express.js</h2>
         </div>}
 
-        {mongoose && <div className='blurredContentContainer w-fit items-start p-2 mb-1'>
+        {mongoose && <div className='blurredContentContainer w-fit items-start p-2 mr-1 mb-1'>
             <h2 className='text-white'>Mongoose.js</h2>
         </div>}
 
-        {overflow && <div className='flex w-fit items-start py-2 mb-1'>
+        {overflow && <div className='flex w-fit items-start py-2 mr-1  mb-1'>
             <h2 className='text-white'>...</h2>
         </div>}
     </div>

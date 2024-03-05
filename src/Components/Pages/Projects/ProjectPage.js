@@ -58,7 +58,7 @@ export default function ProjectPage() {
 
       if (screenWidth > 1005){
         setPlayerSize('full')
-      } else if (screenWidth <= 1005 && screenWidth > 600) {
+      } else if (screenWidth <= 1005 && screenWidth > 675) {
         setPlayerSize('md')
       } else {
         setPlayerSize('sm')
@@ -97,15 +97,15 @@ export default function ProjectPage() {
               <h1 className='text-white text-2xl'>Card Size:</h1>
               <div className='flex flex-row blurredContentContainer border-2 border-black'>
                 <div 
-                  className={`${cardSize === 'sm' ? 'bg-black' : ''} p-2 px-4 cursor-pointer`}
+                  className={`${cardSize === 'sm' ? 'bg-white' : ''} p-2 px-4 cursor-pointer`}
                   onClick={() => handleSetCardSize('sm')}>
-                  <HiSquares2X2 color='white' size={35} />
+                  <HiSquares2X2 color={cardSize === 'sm' ? 'black' : 'white'} size={35} />
                 </div>
 
                 <div 
-                  className={`${cardSize === 'lg' ? 'bg-black' : ''} p-2 px-4 cursor-pointer`}
+                  className={`${cardSize === 'lg' ? 'bg-white' : ''} p-2 px-4 cursor-pointer`}
                   onClick={() => handleSetCardSize('lg')}>
-                  <PiSquareSplitHorizontalFill color='white' size={35} />
+                  <PiSquareSplitHorizontalFill color={cardSize === 'lg' ? 'black' : 'white'} size={35} />
                 </div>
               </div>
             </div>
@@ -115,21 +115,21 @@ export default function ProjectPage() {
               <h1 className='text-white text-2xl'>Language Filter:</h1>
               <div className='flex flex-row blurredContentContainer border-2 border-black'>
                 <div 
-                  className={`${filterSettings['React'] ? 'bg-black' : ''} p-2 px-4 cursor-pointer`}
+                  className={`${filterSettings['React'] ? 'bg-white' : ''} p-2 px-4 cursor-pointer`}
                   onClick={() => handleChangeFilter('React')}>
-                  <FaReact color='white' size={35} />
+                  <FaReact color={filterSettings['React'] ? 'black' : 'white'} size={35} />
                 </div>
 
                 <div 
-                  className={`${filterSettings['Python'] ? 'bg-black' : ''} p-2 px-4 cursor-pointer`}
+                  className={`${filterSettings['Python'] ? 'bg-white' : ''} p-2 px-4 cursor-pointer`}
                   onClick={() => handleChangeFilter('Python')}>
-                  <SiPython color='white' size={35} />
+                  <SiPython color={filterSettings['Python'] ? 'black' : 'white'} size={35} />
                 </div>
 
                 <div 
-                  className={`${filterSettings['JS'] ? 'bg-black' : ''} p-2 px-4 cursor-pointer`}
+                  className={`${filterSettings['JS'] ? 'bg-white' : ''} p-2 px-4 cursor-pointer`}
                   onClick={() => handleChangeFilter('JS')}>
-                  <IoLogoJavascript color='white' size={35} />
+                  <IoLogoJavascript color={filterSettings['JS'] ? 'black' : 'white'} size={35} />
                 </div>
               </div>
             </div>
@@ -163,7 +163,7 @@ export default function ProjectPage() {
                 })}
         </motion.div>
 
-        {/* Dimming Layer */}
+        {/* Dimming Layer & Expanded Project Tile */}
         {selectedId !== '' && 
           <ExpandedProjectTile 
             project_id = {selectedId} 

@@ -25,7 +25,7 @@ export const data = {
         repo_link: 'https://github.com/willk0814/pathfinder',
         demo_link: 'https://willk0814.github.io/pathfinder/',
         video_id: 'zNvEhUeH3Mg',
-        stack: ['TS', 'React', 'tailwind', 'node']
+        stack: ['TS', 'JS', 'React', 'tailwind', 'node']
         },
     'project_4': {
         title: 'Written Numbers',
