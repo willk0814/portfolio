@@ -38,9 +38,9 @@ export default function TechnologyBar({ stack, full }) {
         let displayStack = [...stack];
     
         // Check if we want the full stack
-        if (!full && stack.length > 3) {
+        if (!full && stack.length > 2) {
             // Construct abbreviated stack
-            displayStack = stack.slice(0, 3);
+            displayStack = stack.slice(0, 2);
             displayStack.push('overflow');
         }
     

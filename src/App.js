@@ -41,6 +41,9 @@ function App() {
           </Routes>
         </div>
       </div>
+      <footer className="bg-black text-white flex items-center justify-end">
+        Made by Will Koenig
+      </footer>
     </Router>
   );
 }

@@ -140,7 +140,7 @@ export default function ProjectPage() {
           initial = {{ opacity: 0, y: '2rem'}}
           animate = {{ opacity: 1, y: 0 }}
           transition = {{ duration: 0.5 }}
-          className='flex flex-wrap justify-center mt-4'>
+          className={`flex flex-wrap justify-center mt-4 ${cardSize === 'sm' ? 'max-w-[975px]' : ''}`}>
             
               {Object.keys(data).map((card_id, ind) => {
                 let card_data = data[card_id]
