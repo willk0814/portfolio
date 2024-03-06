@@ -18,10 +18,14 @@ import ContactMe from "./Components/Pages/ContactMe";
 // Import Project Page with animation carddsd
 import ProjectPage from "./Components/Pages/Projects/ProjectPage"
 
+// Import Analytics from Vercel
+import { Analytics } from '@vercel/analytics'
+
 
 function App() {
   return (
     <Router>
+      <Analytics />
       <div className='relative'>
         {/* <ParticleComponent /> */}
         <BackgroundContainer />
