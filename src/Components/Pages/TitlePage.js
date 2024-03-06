@@ -12,7 +12,9 @@ import { HiOutlineDocumentText } from 'react-icons/hi'
 
 export default function TitlePage() {
   return (
-    <div className='pageContainer' name='home'>
+    <div className='pageContainer justify-start' name='home'>
+
+      <div className='flex my-10 flex-col justify-start'>
 
         {/* About Me */}
         <div className='flex flex-col w-[80vw] max-w-[900px] items-center justify-center'>
@@ -28,8 +30,8 @@ export default function TitlePage() {
 
           <motion.div 
             className='blurredContentContainer'
-            initial = {{ opacity: 0 }}
-            animate = {{ opacity: 1 }}
+            initial = {{ opacity: 0, y: '2rem' }}
+            animate = {{ opacity: 1, y: 0 }}
             transition = {{ duration: 1 }}>
             <p className='text-white md:text-2xl text-xl p-2'>
               Hi! My name is Will and I am a full stack Software Engineer with experience building dynamic web and mobile applications using JavaScript and React as well as implementing Machine Learning algorithms using Python.  I am interested in the applications of Machine Learning to so many of our daily tasks, how can we leverage data to learn more about seemingly mundane tasks?
@@ -47,7 +49,7 @@ export default function TitlePage() {
               href='https://linkedin.com/in/will-koenig' 
               target='_blank'
               rel='noreferrer'
-              whileHover = {{ boxShadow: '0px 0px 8px rgb(255, 255, 255)'}}>
+              whileHover = {{ boxShadow: '0px 0px 20px rgb(255, 255, 255)'}}>
               <AiFillLinkedin className='cursor-pointer' size={70} color='white'/>
             </motion.a>
             <motion.a 
@@ -55,7 +57,7 @@ export default function TitlePage() {
               href='https://github.com/willk0814' 
               target='_blank'
               rel='noreferrer'
-              whileHover = {{ boxShadow: '0px 0px 8px rgb(255, 255, 255)'}}>
+              whileHover = {{ boxShadow: '0px 0px 20px rgb(255, 255, 255)'}}>
               <AiFillGithub className='cursor-pointer' size={70} color='white'/>
             </motion.a>
             <motion.a 
@@ -63,14 +65,12 @@ export default function TitlePage() {
               href={Koenig_Resume} 
               target='_blank'
               rel='noopener noreferrer'
-              whileHover = {{ boxShadow: '0px 0px 8px rgb(255, 255, 255)'}}>
+              whileHover = {{ boxShadow: '0px 0px 20px rgb(255, 255, 255)'}}>
               <HiOutlineDocumentText className='cursor-pointer' size={70} color='white'/>
             </motion.a>
           </motion.div>
         </div>
-
-        {/* Floating Arrow Down */}
-
+      </div>
     </div>
   )
 }
