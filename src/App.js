@@ -19,7 +19,7 @@ import ContactMe from "./Components/Pages/ContactMe";
 import ProjectPage from "./Components/Pages/Projects/ProjectPage"
 
 // Import Analytics from Vercel
-import { Analytics } from '@vercel/analytics'
+import { Analytics } from "@vercel/analytics/react"
 
 
 function App() {
