@@ -7,8 +7,10 @@ import desert2 from '../../../assets/backgrounds/ganapathy-kumar-L75D18aVal8-uns
 
 export default function BackgroundContainer() {
   return (
-    <div 
-        className="fixed inset-0 min-h-screen bg-cover bg-center" 
-        style={{backgroundImage: `url(${kyloRen})` }}>
+    <div className='fixed inset-0 h-[100vh] w-[100vw] bg-[#47423e]'>
+      <div 
+          className="fixed inset-0 min-h-screen bg-cover bg-center" 
+          style={{backgroundImage: `url(${kyloRen})` }}>
+      </div>
     </div>
     )}
