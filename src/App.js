@@ -2,7 +2,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Import Background
-import ParticleComponent from "./Components/Backgrounds/ParticleBg/ParticleComponent";
+// import ParticleComponent from "./Components/Backgrounds/ParticleBg/ParticleComponent";
 import BackgroundContainer from "./Components/Backgrounds/PictureBg/BackgroundContainer";
 
 // Import NavBar Component
@@ -27,7 +27,6 @@ function App() {
     <Router>
       <Analytics />
       <div className='relative'>
-        {/* <ParticleComponent /> */}
         <BackgroundContainer />
         <div className='relative'>
           <NavBar />
@@ -41,9 +40,6 @@ function App() {
           </Routes>
         </div>
       </div>
-      <footer className="bg-black text-white flex items-center justify-end">
-        Made by Will Koenig
-      </footer>
     </Router>
   );
 }

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 export default function EducationPage() {
   return (
     <div className='pageContainer justify-start' name='education'>  
-      <div className='flex flex-col items-center justify-center mt-10'>
+      <div className='flex flex-col items-center justify-center my-10'>
         <motion.h1 
           className='text-white text-6xl md:text-8xl mb-4'
           initial = {{ opacity: 0, y: '-2rem' }}

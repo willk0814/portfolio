@@ -9,7 +9,7 @@ import { skillsData } from '../../assets/skillsData'
 export default function SkillsPage() {
   return (
     <div className='pageContainer justify-start' name='skills'>
-        <div className='flex flex-col mt-10 items-center justify-center max-w-[950px]'>
+        <div className='flex flex-col my-10 items-center justify-center max-w-[950px]'>
             <motion.h1 
                 className='text-white text-8xl mb-3'
                 initial = {{ opacity: 0, y: '-2rem' }}
