@@ -28,7 +28,7 @@ function App() {
       <Analytics />
       <BackgroundContainer />
       <div className='relative'>
-        <div className='relative'>
+        
           <NavBar />
           <Routes>
             <Route path="/" index element={<TitlePage/>} />
@@ -38,7 +38,7 @@ function App() {
             <Route path="/projects" element={<ProjectPage />} />
             <Route path="/contact" element={<ContactMe />} />
           </Routes>
-        </div>
+        
       </div>
     </Router>
   );
