@@ -26,8 +26,8 @@ function App() {
   return (
     <Router>
       <Analytics />
+      <BackgroundContainer />
       <div className='relative'>
-        <BackgroundContainer />
         <div className='relative'>
           <NavBar />
           <Routes>
