@@ -42,7 +42,7 @@ export default function ExperiencePage() {
 
   return (
     <div className='pageContainer justify-start' name='experience'>
-        <div className='flex my-10 h-90vw justify-start flex-col'>
+        <div className='flex my-10 justify-start flex-col'>
           <motion.h1 
             className='text-white md:text-8xl text-6xl mb-4 text-center'
             initial = {{ opacity: 0, y: '-2rem' }}

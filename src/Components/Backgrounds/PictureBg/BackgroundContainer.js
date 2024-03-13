@@ -1,9 +1,12 @@
 import React from 'react'
 
-import darkLeaves from "../../../assets/backgrounds/andrew-neel-jtsW--Z6bFw-unsplash.jpg"
-import desert from "../../../assets/backgrounds/neom-TA5hw14Coh4-unsplash.jpg"
 import kyloRen from "../../../assets/backgrounds/venti-views-35uZM_4wjYg-unsplash.jpg"
-import desert2 from '../../../assets/backgrounds/ganapathy-kumar-L75D18aVal8-unsplash.jpg'
+
+// import nyc1 from '../../../assets/backgrounds/hannah-busing-0V6DmTuJaIk-unsplash.jpg'
+// import nyc2 from '../../../assets/backgrounds/jermaine-ee-A2CChTZvzTE-unsplash.jpg'
+// import rainforest from '../../../assets/backgrounds/ajit-singh-wJwx_jSgZuA-unsplash.jpg'
+// import amsterdam from '../../../assets/backgrounds/azhar-j-t2hgHV1R7_g-unsplash.jpg'
+
 
 export default function BackgroundContainer() {
   return (

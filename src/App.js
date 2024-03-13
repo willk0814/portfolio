@@ -10,9 +10,13 @@ import NavBar from "./Components/NavBar/NavBar";
 
 // Import Created Page Components
 import TitlePage from "./Components/Pages/TitlePage";
+
+import ResumePage from "./Components/Pages/Resume/ResumePage";
+
 import SkillsPage from "./Components/Pages/SkillsPage";
 import EducationPage from "./Components/Pages/EducationPage"
 import ExperiencePage from "./Components/Pages/ExperiencePage";
+
 import ContactMe from "./Components/Pages/ContactMe";
 
 // Import Project Page with animation carddsd
@@ -28,17 +32,19 @@ function App() {
       <Analytics />
       <BackgroundContainer />
       <div className='relative'>
-        
           <NavBar />
           <Routes>
             <Route path="/" index element={<TitlePage/>} />
+
+            <Route path="/resume" element={<ResumePage />} />
+
             <Route path="/skills" element={<SkillsPage />} />
             <Route path="/education" element={<EducationPage />} />
             <Route path="/experience" element={<ExperiencePage />} />
+
             <Route path="/projects" element={<ProjectPage />} />
             <Route path="/contact" element={<ContactMe />} />
           </Routes>
-        
       </div>
     </Router>
   );

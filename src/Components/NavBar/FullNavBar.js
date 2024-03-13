@@ -12,6 +12,7 @@ export default function FullNavBar() {
     const [underlineState, setUnderlineState] = useState({
         home: false,
         about: false,
+        resume: false,
         skills: false,
         education: false,
         experience: false,
@@ -57,6 +58,19 @@ export default function FullNavBar() {
     <div 
         className='blurredContentContainer rounded-xl py-0 flex items-center'>
         <ul className='flex flex-row list-none'>
+            <li 
+                className='px-2'
+                onMouseEnter={() => toggleUnderline('resume')} 
+                onMouseLeave={() => toggleUnderline('resume')}>
+                <Link to='/resume'>
+                    <h2 className='text-white cursor-pointer font-semibold text-2xl'>Resume</h2>
+                </Link>
+                <div 
+                    className='w-[0%] relative bg-white h-[2px] duration-300'
+                    style={{ width: underlineState.resume ? "100%" : "0%"}}>
+                </div>
+            </li>
+            
             <li 
                 className='px-2'
                 onMouseEnter={() => toggleUnderline('skills')} 
