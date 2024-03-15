@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react'
 import { FaReact, FaHtml5, FaNodeJs } from 'react-icons/fa'
 import { SiPython, SiMongodb, SiTailwindcss, 
     SiTypescript, SiPytorch, SiTensorflow, 
-    SiNumpy,SiPandas, SiJupyter, SiFramer } from "react-icons/si";
+    SiNumpy,SiPandas, SiJupyter, SiFramer,
+    SiExpress, SiMongoose} from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { IoLogoJavascript } from "react-icons/io5";
 import { IoLogoCss3 } from "react-icons/io";
@@ -196,12 +197,12 @@ export default function TechnologyBar({ stack, full }) {
             <SiFramer size={25} color='white' />
         </div>}
 
-        {express && <div className='blurredContentContainer w-fit items-start p-2 mr-1 mb-1'>
-            <h2 className='text-white'>Express.js</h2>
+        {express &&  <div className='blurredContentContainer w-fit items-start p-2 mr-1 mb-1'>
+            <SiExpress size={25} color='white' />
         </div>}
 
-        {mongoose && <div className='blurredContentContainer w-fit items-start p-2 mr-1 mb-1'>
-            <h2 className='text-white'>Mongoose.js</h2>
+        {mongoose &&  <div className='blurredContentContainer w-fit items-start p-2 mr-1 mb-1'>
+            <SiMongoose size={25} color='white' />
         </div>}
 
         {overflow && <div className='flex w-fit items-start py-2 mr-1  mb-1'>

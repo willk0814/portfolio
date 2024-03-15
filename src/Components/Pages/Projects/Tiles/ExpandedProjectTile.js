@@ -9,7 +9,7 @@ import Youtube from 'react-youtube'
 // Import Github Icon
 import { AiFillGithub } from 'react-icons/ai'
 import { CgWebsite } from "react-icons/cg";
-import { FaExternalLinkAlt } from "react-icons/fa";
+// import { FaExternalLinkAlt } from "react-icons/fa";
 
 // Import Created Technology Stack Component
 import TechnologyBar from './TechnologyBar'
@@ -82,14 +82,14 @@ export default function ExpandedProjectTile({ project_id, project_data, selectCa
                   {/* Title */}
                   <motion.div
                     variants={contentVariants}
-                    className='mb-1'>
+                    className='blurredContentContainer items-start mb-1 p-2 w-fit'>
                       <motion.h1 
                         className={`text-white ${playerSize === 'sm' ? 'text-3xl':'text-5xl'}`}>{project_data.title}</motion.h1>
                   </motion.div>
 
                   <motion.span 
                     variants={spanVariants} 
-                    className='w-[100%] h-[1px] bg-white mb-3'></motion.span>
+                    className='w-[100%] h-[2px] bg-white mb-3'></motion.span>
 
                   {/* Buttons */}
                   <motion.div
@@ -122,7 +122,7 @@ export default function ExpandedProjectTile({ project_id, project_data, selectCa
                   
                   <motion.span 
                     variants={spanVariants} 
-                    className='w-[100%] h-[1px] bg-white mb-3'></motion.span>
+                    className='w-[100%] h-[2px] bg-white mb-3'></motion.span>
 
                   {/* Technology Stack */}
                   <motion.div variants={contentVariants}>
@@ -133,12 +133,12 @@ export default function ExpandedProjectTile({ project_id, project_data, selectCa
 
                   <motion.span 
                     variants={spanVariants} 
-                    className='w-[100%] h-[1px] bg-white mb-3'></motion.span>
+                    className='w-[100%] h-[2px] bg-white mb-3'></motion.span>
 
                   {/* Content */}
                   <motion.div 
                     variants={contentVariants}
-                    className={`text-white ${playerSize === 'sm' ? 'text-lg':'text-xl'}`}>
+                    className={`blurredContentContainer p-2 text-white ${playerSize === 'sm' ? 'text-lg':'text-xl'}`}>
                       {project_data.content}
                   </motion.div>
 

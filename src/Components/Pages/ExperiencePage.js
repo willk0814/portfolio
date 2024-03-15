@@ -21,23 +21,6 @@ export default function ExperiencePage() {
 
   // Function that checks if a section is expanded
   const isExpanded = (section) => section === expandedSection
-
-  // Variant for Content Container
-  const containerVariant = {
-    open: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: {
-          when: 'beforeChildren',
-          staggerChildren: 0.1
-        }
-      }},
-    closed: {
-      y: '-2rem',
-      opacity: 0
-    }
-  }
   
 
   return (
