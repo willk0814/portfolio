@@ -26,7 +26,7 @@ export default function SkillsPage() {
                 {Object.keys(skillsData).map((group, ind) => {
                     return (
                         <div 
-                            className='blurredContentContainer justify-start items-start min-h-[100%] w-[300px] p-2 m-1'
+                            className='blurredContentContainer flex-grow justify-start items-start min-h-[100%] w-[300px] p-2 m-1'
                             key={ind}>
                                 <h1 className='text-white text-3xl font-bold'>{group}</h1>
                                 <ul className='flex flex-col items-start list-disc pl-[18px]'>
